@@ -44,6 +44,25 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-import-resolver-babel-module": "^5.1.0",
     "eslint-plugin-react": "^7.16.0",
+    "jest-junit": "^9.0.0",
     "node-sass": "^4.13.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/store/index.js",
+      "!src/components/**/*.{js,jsx}",
+      "!src/router/*.{js,jsx}"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "test-results/jest",
+    "outputName": "results.xml",
+    "classNameTemplate": "{classname} - {title}",
+    "titleTemplate": "{classname} - {title}",
+    "ancestorSeparator": " > ",
+    "usePathForSuiteName": "true"
   }
 }
