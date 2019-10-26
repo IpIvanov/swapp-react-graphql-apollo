@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import {
   TextField, Button, Container, FormGroup,
-  Box, Grid, Typography, Paper
+  Box, Grid, Typography, Paper,
 } from '@material-ui/core';
 
 
-const Login = (props) => {
+const Login = () => {
   const [values, setValues] = useState({
     email: '',
-    password: ''
-  })
+    password: '',
+  });
   const handleChange = (evt) => {
-    const value = evt.target.value;
+    const { value } = evt.target;
     setValues({
       ...values,
-      [evt.target.name]: value
+      [evt.target.name]: value,
     });
   };
 
   const userLogin = () => {
-    console.log('user login')
+    console.log('user login');
   };
 
   return (
@@ -52,7 +52,10 @@ const Login = (props) => {
               </Grid>
               <Grid item xs>
                 <Box display="flex" justifyContent="flex-end">
-                  <Button color="primary" variant="outlined" size="large"
+                  <Button
+                    color="primary"
+                    variant="outlined"
+                    size="large"
                     style={{
                       textTransform: 'none',
                       background: '#000',

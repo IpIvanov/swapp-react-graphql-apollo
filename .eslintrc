@@ -1,0 +1,65 @@
+{
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "labelAttributes": [
+          "label"
+        ],
+        "controlComponents": [
+          "input",
+          "span"
+        ],
+        "depth": 3
+      }
+    ],
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "object-curly-newline": "off",
+    "jsx-a11y/label-has-for": 1,
+    "jsx-a11y/click-events-have-key-events": "off",
+    "no-static-element-interactions": "off",
+    "react/forbid-prop-types": "off",
+    "import/prefer-default-export": "off",
+    "no-case-declarations": "off",
+    "linebreak-style": "off",
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "max-len": [
+      1,
+      {
+        "code": 150
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/no-extraneous-dependencies": "off"
+  },
+  "globals": {
+    "fetch": false,
+    "window": false,
+    "global": false,
+    "t": false
+  }
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
 import { Input } from '@material-ui/icons';
-import styles from './styles';
 import { makeStyles } from '@material-ui/core';
+import styles from './styles';
 
 const Header = () => {
   const currentStyles = {
@@ -41,7 +41,7 @@ const Header = () => {
           />
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 export default withRouter(Header);

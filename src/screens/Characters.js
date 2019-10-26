@@ -1,5 +1,4 @@
 import React from 'react';
-import { Header } from '../components'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
@@ -9,8 +8,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { Header } from '../components';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   container: {
     marginTop: 50,
   },
@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Characters = (props) => {
+const Characters = () => {
   const classes = useStyles();
 
   return (
@@ -75,7 +75,10 @@ const Characters = (props) => {
             </Grid>
           </Grid>
           <Box display="flex" justifyContent="center" alignItems="center" flex="1">
-            <Button color="primary" variant="outlined" size="small"
+            <Button
+              color="primary"
+              variant="outlined"
+              size="small"
               style={{
                 textTransform: 'none',
                 background: '#000',

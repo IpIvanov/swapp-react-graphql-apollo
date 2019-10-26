@@ -16,7 +16,7 @@ const styles = {
     color: '#4BD5EE',
     '&:hover': {
       cursor: 'pointer',
-    }
+    },
   },
   linkHome: {
     padding: 10,
@@ -26,7 +26,7 @@ const styles = {
     fontSize: 26,
     '&:hover': {
       cursor: 'pointer',
-    }
+    },
   },
   exit: {
     padding: 3,
@@ -36,7 +36,7 @@ const styles = {
     color: '#4BD5EE',
     '&:hover': {
       cursor: 'pointer',
-    }
+    },
   },
   active: {
     textDecoration: 'none',
