@@ -1,5 +1,4 @@
 import React from 'react';
-import { Header } from '../components'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
@@ -8,8 +7,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import { Header } from '../components';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   container: {
     marginTop: 50,
   },
@@ -58,10 +58,10 @@ const useStyles = makeStyles(theme => ({
   title: {
     color: '#4BD5EE',
     fontWeight: 700,
-  }
+  },
 }));
 
-const CharacterDetails = (props) => {
+const CharacterDetails = () => {
   const classes = useStyles();
 
   return (
@@ -85,16 +85,24 @@ const CharacterDetails = (props) => {
               />
               <CardContent style={{ padding: 0, paddingTop: 10 }}>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
-                  Height: <span style={{ color: '#4BD5EE' }}>asd</span>
+                  Height:
+                  {' '}
+                  <span style={{ color: '#4BD5EE' }}>asd</span>
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
-                  Weight: <span style={{ color: '#4BD5EE' }}>asd</span>
+                  Weight:
+                  {' '}
+                  <span style={{ color: '#4BD5EE' }}>asd</span>
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
-                  Species: <span style={{ color: '#4BD5EE' }}>asd</span>
+                  Species:
+                  {' '}
+                  <span style={{ color: '#4BD5EE' }}>asd</span>
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
-                  Home World: <span style={{ color: '#4BD5EE' }}>asd</span>
+                  Home World:
+                  {' '}
+                  <span style={{ color: '#4BD5EE' }}>asd</span>
                 </Typography>
               </CardContent>
             </Card>

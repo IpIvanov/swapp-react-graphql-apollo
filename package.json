@@ -16,11 +16,15 @@
     "test": "react-scripts test",
     "test:ci": "npm run lint && react-scripts test --watchAll=false --ci --coverage --coverageDirectory=test/coverage --reporters=default --reporters=jest-junit",
     "eject": "react-scripts eject",
-    "lint": "eslint src",
+    "lint": "eslint --ext .js src/",
     "ci": "yarn lint && cross-env CI=true yarn test --coverage"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ]
   },
   "browserslist": {
     "production": [
@@ -35,6 +39,11 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-react": "^7.16.0",
     "node-sass": "^4.13.0"
   }
 }
