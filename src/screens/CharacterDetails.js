@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
@@ -7,6 +8,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+import { useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
+
 import { Header } from '../components';
 
 const useStyles = makeStyles(() => ({
@@ -61,48 +67,82 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const GET_CHARACTER_DETAILS = gql`
+  query getCharacterDetails($id: ID!) {
+    person(id: $id) {
+      name
+      height
+      image
+      homeworld {
+        name
+      }
+      species {
+        name
+      }
+      starships {
+        edges {
+          node {
+            id
+            name
+            image
+          }
+        }
+      }
+    }
+  }
+`;
+
 const CharacterDetails = () => {
   const classes = useStyles();
+  const { characterId } = useParams();
+
+  const { loading, data } = useQuery(GET_CHARACTER_DETAILS, {
+    variables: { id: characterId },
+  });
+
+  if (loading) {
+    return (<CircularProgress />);
+  }
 
   return (
     <div style={{ backgroundColor: '#E8EAED', minHeight: '100vh' }}>
       <Header />
       <Container maxWidth="md" className={classes.container}>
         <Typography component="h5" variant="h5" className={classes.name}>
-          Obi-wan Kenobi
+          {data.person.name}
         </Typography>
         <Divider style={{ marginBottom: 20 }} />
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <Card style={{ padding: 20 }}>
               <Typography gutterBottom variant="h5" component="h2" className={classes.title}>
-                Obi-Wan Kenobi
+                {data.person.name}
               </Typography>
               <CardMedia
                 className={classes.cover}
-                image="https://fsmedia.imgix.net/eb/d1/19/f1/9a64/4b2d/8471/d02314b53684/obi-wan-kenobi-in-the-original-star-wars.jpeg"
-                title="Contemplative Reptile"
+                image={data.person.image}
+                title={data.person.name}
               />
               <CardContent style={{ padding: 0, paddingTop: 10 }}>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
                   Height:
                   {' '}
-                  <span style={{ color: '#4BD5EE' }}>asd</span>
+                  <span style={{ color: '#4BD5EE' }}>{data.person.height}</span>
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
                   Weight:
                   {' '}
-                  <span style={{ color: '#4BD5EE' }}>asd</span>
+                  <span style={{ color: '#4BD5EE' }}>{data.person.weight ? data.person.weight : 'N/A'}</span>
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
                   Species:
                   {' '}
-                  <span style={{ color: '#4BD5EE' }}>asd</span>
+                  <span style={{ color: '#4BD5EE' }}>{data.person.species.name}</span>
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
                   Home World:
                   {' '}
-                  <span style={{ color: '#4BD5EE' }}>asd</span>
+                  <span style={{ color: '#4BD5EE' }}>{data.person.homeworld.name}</span>
                 </Typography>
               </CardContent>
             </Card>
@@ -112,21 +152,25 @@ const CharacterDetails = () => {
               Piloted Starships
             </Typography>
             <Divider style={{ marginBottom: 20 }} />
-            <Grid container display="flex" flexDirection="column">
-              <Grid item xs={12}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.starshipCover}
-                    image="https://cdn3.volusion.com/bmfcy.fjqhr/v/vspfiles/photos/BANSW219770-2.jpg?1533738074"
-                    title="Millennium Falcon image"
-                  />
-                  <CardContent className={classes.content}>
-                    <Typography component="h6" variant="h6" className={classes.starshipName}>
-                      Millennium Falcon
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
+            <Grid container>
+              {data.person.starships.edges.map(({ node: { id, name, image } }) => (
+                <Grid item xs={12} key={id}>
+                  <Link to={`/starships/${id}`} style={{ textDecoration: 'none' }}>
+                    <Card className={classes.card}>
+                      <CardMedia
+                        className={classes.starshipCover}
+                        image={image}
+                        title={name}
+                      />
+                      <CardContent className={classes.content}>
+                        <Typography component="h6" variant="h6" className={classes.starshipName}>
+                          {name}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </Grid>
+              ))}
             </Grid>
           </Grid>
         </Grid>
