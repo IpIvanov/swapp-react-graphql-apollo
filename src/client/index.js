@@ -7,7 +7,7 @@ import { createHttpLink } from 'apollo-link-http';
 import authLink from './auth';
 
 const httpLink = createHttpLink({
-  uri: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql',
+  uri: process.env.REACT_APP_APOLLO_URI,
 });
 
 const linkError = onError(({ graphQLErrors, networkError }) => {
