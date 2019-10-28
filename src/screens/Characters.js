@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
@@ -8,6 +9,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+import { useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
+
 import { Header } from '../components';
 
 const useStyles = makeStyles(() => ({
@@ -36,8 +42,35 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const GET_CHARACTERS = gql`
+  query getCharacters($first: Int!) {
+    allPeople(first: $first) {
+      edges {
+        node {
+          id
+          name
+          image
+        }
+      }
+    }
+  }
+`;
+
 const Characters = () => {
   const classes = useStyles();
+
+  const { loading, data } = useQuery(GET_CHARACTERS, {
+    variables: { first: 12 },
+  });
+
+  if (loading) {
+    return (<CircularProgress />);
+  }
+  const allCharacters = data.allPeople.edges.map(({ node: { id, name, image } }) => ({
+    id,
+    name,
+    image,
+  }));
 
   return (
     <div style={{ backgroundColor: '#E8EAED', minHeight: '100vh' }}>
@@ -45,34 +78,24 @@ const Characters = () => {
       <Container maxWidth="md" className={classes.container}>
         <Grid container display="flex" direction="row">
           <Grid container spacing={2}>
-            <Grid item xs={12} md={4}>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cover}
-                  image="https://fsmedia.imgix.net/eb/d1/19/f1/9a64/4b2d/8471/d02314b53684/obi-wan-kenobi-in-the-original-star-wars.jpeg"
-                  title="Luke Skywalker image"
-                />
-                <CardContent className={classes.content}>
-                  <Typography component="h5" variant="h5" className={classes.name}>
-                    Luke Skywalker
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cover}
-                  image="https://fsmedia.imgix.net/eb/d1/19/f1/9a64/4b2d/8471/d02314b53684/obi-wan-kenobi-in-the-original-star-wars.jpeg"
-                  title="Luke Skywalker image"
-                />
-                <CardContent className={classes.content}>
-                  <Typography component="h5" variant="h5" className={classes.name}>
-                    Luke Skywalker
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+            {allCharacters.map((character) => (
+              <Grid item xs={12} md={4} key={character.name}>
+                <Link to={`/characters/${character.id}`} style={{ textDecoration: 'none' }}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cover}
+                      image={character.image}
+                      title={character.name}
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography component="h5" variant="h5" className={classes.name}>
+                        {character.name}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </Grid>
+            ))}
           </Grid>
           <Box display="flex" justifyContent="center" alignItems="center" flex="1">
             <Button

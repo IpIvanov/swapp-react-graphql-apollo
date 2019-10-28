@@ -1,15 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
   TextField, Button, Container, FormGroup,
-  Box, Grid, Typography, Paper,
+  Box, Grid, Typography, Paper, CircularProgress,
 } from '@material-ui/core';
+import { useApolloClient, useMutation } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
 
+const SIGN_IN = gql`
+  mutation SignIn($email: String!, $password: String!) {
+    signIn(email: $email, password: $password) {
+      token
+    }
+  }
+`;
 
 const Login = () => {
+  const history = useHistory();
+  const client = useApolloClient();
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  const [login, { loading }] = useMutation(SIGN_IN, {
+    onCompleted: ({ signIn: { token } }) => {
+      localStorage.setItem('token', token);
+      client.writeData({ data: { authenticated: true } });
+      history.push('/episodes');
+    },
+    onError: () => {
+      setErrorMessage('Invalid credentials!');
+    },
+  });
+
+
   const [values, setValues] = useState({
     email: '',
     password: '',
   });
+
   const handleChange = (evt) => {
     const { value } = evt.target;
     setValues({
@@ -19,8 +46,18 @@ const Login = () => {
   };
 
   const userLogin = () => {
-    console.log('user login');
+    login({ variables: { email: values.email, password: values.password } });
   };
+
+  useEffect(() => {
+    localStorage.removeItem('token');
+  }, []);
+
+  if (loading) {
+    return (
+      <CircularProgress />
+    );
+  }
 
   return (
     <Container fluid="true" style={{ backgroundColor: '#000', minHeight: '100vh' }}>
@@ -31,6 +68,13 @@ const Login = () => {
         <Paper>
           <Box p={10}>
             <Grid container spacing={5} display="flex" direction="column">
+              {errorMessage && (
+                <Grid item xs>
+                  <Typography component="h5" variant="h5" style={{ color: 'red' }} align="left">
+                    {errorMessage}
+                  </Typography>
+                </Grid>
+              )}
               <Grid item xs>
                 <FormGroup>
                   <TextField
@@ -76,4 +120,5 @@ const Login = () => {
     </Container>
   );
 };
+
 export default Login;
