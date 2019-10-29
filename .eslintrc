@@ -32,6 +32,7 @@
     "jsx-a11y/click-events-have-key-events": "off",
     "no-static-element-interactions": "off",
     "react/forbid-prop-types": "off",
+    "react/prop-types": "off",
     "import/prefer-default-export": "off",
     "no-case-declarations": "off",
     "linebreak-style": "off",

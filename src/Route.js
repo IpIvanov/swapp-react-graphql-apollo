@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Login, Characters, CharacterDetails, Episodes, EpisodeDetails, StarshipDetails } from './screens';
+import { PrivateRoute } from './components';
+import { useIsAuthorized } from './utils/useIsAuthorized';
 
 const appStyles = {
   container: {
@@ -25,6 +27,7 @@ const appStyles = {
 const App = () => {
   const useStyles = makeStyles(appStyles);
   const classes = useStyles();
+  const isAuthorized = useIsAuthorized();
 
   return (
     <div className="App" classes={classes.container}>
@@ -32,15 +35,11 @@ const App = () => {
         <Switch>
           <Route exact path="/" render={() => <Redirect to="/login" />} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/episodes" component={Episodes} />
-          <Route exact path="/episodes/:episodeId" component={EpisodeDetails} />
-          <Route exact path="/characters" component={Characters} />
-          <Route
-            exact
-            path="/characters/:characterId"
-            component={CharacterDetails}
-          />
-          <Route exact path="/starships/:starshipId" component={StarshipDetails} />
+          <PrivateRoute exact path="/episodes" component={Episodes} publicRoute="/login" isAuthorized={isAuthorized} />
+          <PrivateRoute exact path="/episodes/:episodeId" component={EpisodeDetails} publicRoute="/login" isAuthorized={isAuthorized} />
+          <PrivateRoute exact path="/characters" component={Characters} publicRoute="/login" isAuthorized={isAuthorized} />
+          <PrivateRoute exact path="/characters/:characterId" component={CharacterDetails} publicRoute="/login" isAuthorized={isAuthorized} />
+          <PrivateRoute exact path="/starships/:starshipId" component={StarshipDetails} publicRoute="/login" isAuthorized={isAuthorized} />
           <Route exact render={() => <Redirect to="/login" />} />
         </Switch>
       </Router>

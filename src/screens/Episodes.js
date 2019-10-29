@@ -30,7 +30,6 @@ const useStyles = makeStyles({
     textAlign: 'left',
   },
   card: {
-    maxWidth: 200,
     maxHeight: 400,
     marginBottom: 20,
   },
@@ -77,9 +76,9 @@ const Episodes = () => {
       <Header />
       <Container maxWidth="md" className={classes.container}>
         <Grid container display="flex" direction="column">
-          <Grid container spacing={2}>
+          <Grid container spacing={10}>
             {episodes.map((episode) => (
-              <Grid item xs={12} sm={4} key={episode.id}>
+              <Grid item xs={12} sm={6} md={4} key={episode.id}>
                 <Link to={`/episodes/${episode.id}`} style={{ textDecoration: 'none' }}>
                   <Card className={classes.card}>
                     <CardMedia
