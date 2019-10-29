@@ -162,6 +162,7 @@ const CharacterDetails = () => {
               listItems={allStarships}
               loadMoreIsVisible={false}
               linkTo="starships"
+              mdColumns={12}
             />
           </Grid>
         </Grid>

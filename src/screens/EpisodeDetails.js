@@ -143,6 +143,7 @@ const Characters = () => {
           loadMoreIsVisible={loadMoreIsVisible}
           loadMoreHandler={loadMoreData}
           linkTo="characters"
+          mdColumns={4}
         />
       </Container>
     </div>

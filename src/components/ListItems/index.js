@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles, Typography, Card, Grid, Box, Button, CardMedia, CardContent } from '@material-ui/core';
 import styles from './styles';
 
-const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkTo }) => {
+const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkTo, mdColumns }) => {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
 
@@ -11,7 +11,7 @@ const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkTo }) =>
     <Grid container display="flex" direction="row">
       <Grid container spacing={2}>
         {listItems.map(({ name, id, image }, i) => (
-          <Grid item xs={12} md={4} key={i.toString()}>
+          <Grid item xs={12} md={mdColumns} key={i.toString()}>
             <Link to={`/${linkTo}/${id}`} style={{ textDecoration: 'none' }}>
               <Card className={classes.card}>
                 <CardMedia
