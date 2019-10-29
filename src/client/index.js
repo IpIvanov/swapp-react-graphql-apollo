@@ -19,7 +19,6 @@ const linkError = onError(({ graphQLErrors, networkError }) => {
   }
 
   if (networkError) console.log(`[Network error]: ${networkError}`);
-  window.location.href = '';
 });
 
 const cache = new InMemoryCache({ addTypename: false });

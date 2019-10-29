@@ -33,14 +33,14 @@ const App = () => {
     <div className="App" classes={classes.container}>
       <Router>
         <Switch>
-          <Route exact path="/" render={() => <Redirect to="/login" />} />
+          <Route exact path="/" render={() => <Redirect to="/episodes" />} />
           <Route exact path="/login" component={Login} />
           <PrivateRoute exact path="/episodes" component={Episodes} publicRoute="/login" isAuthorized={isAuthorized} />
           <PrivateRoute exact path="/episodes/:episodeId" component={EpisodeDetails} publicRoute="/login" isAuthorized={isAuthorized} />
           <PrivateRoute exact path="/characters" component={Characters} publicRoute="/login" isAuthorized={isAuthorized} />
           <PrivateRoute exact path="/characters/:characterId" component={CharacterDetails} publicRoute="/login" isAuthorized={isAuthorized} />
           <PrivateRoute exact path="/starships/:starshipId" component={StarshipDetails} publicRoute="/login" isAuthorized={isAuthorized} />
-          <Route exact render={() => <Redirect to="/login" />} />
+          <Route exact render={() => <Redirect to="/episodes" />} />
         </Switch>
       </Router>
     </div>
