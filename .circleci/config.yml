@@ -43,5 +43,6 @@ jobs:
             npm run test:ci
       - store_artifacts:
           path: ./test-results/jest
+          destination: results
       - store_test_results:
-          path: ./test-results
+          path: ./test-results/jest
