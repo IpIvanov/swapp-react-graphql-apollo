@@ -26,7 +26,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install
+      - run:
+          name: Install dependencies
+          command: npm install
 
       - save_cache:
           paths:
@@ -34,6 +36,12 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm run test:ci
+      - run:
+          name: Run Tests
+          command: |
+            mkdir -p ./test-results/jest
+            npm run test:ci
+      - store_artifacts:
+          path: ./test-results/jest
       - store_test_results:
-          path: test-results
+          path: ./test-results
