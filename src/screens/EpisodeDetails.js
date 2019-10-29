@@ -3,18 +3,15 @@ import { useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-import { Header } from '../components';
+import { Header, ListItems } from '../components';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -35,10 +32,6 @@ const useStyles = makeStyles(() => ({
     textAlign: 'left',
     marginBottom: 10,
   },
-  cover: {
-    width: 100,
-    height: 120,
-  },
   movieCover: {
     width: 300,
     height: 300,
@@ -52,18 +45,23 @@ const useStyles = makeStyles(() => ({
 }));
 
 const GET_EPISODE_DETAILS = gql`
-  query getEpisodeDetails($id: ID!, $first: Int!) {
+  query getEpisodeDetails($id: ID!, $first: Int!, $after: String!) {
     episode(id: $id){
       title
       image
       openingCrawl
       director
       releaseDate
-      people(first: $first) {
+      people(first: $first, after: $after) {
+        pageInfo {
+          hasNextPage
+        }
         edges {
+          cursor
           node {
-            image
+            id
             name
+            image
           }
         }
       }
@@ -75,13 +73,37 @@ const Characters = () => {
   const classes = useStyles();
   const { episodeId } = useParams();
 
-  const { loading, data } = useQuery(GET_EPISODE_DETAILS, {
-    variables: { id: episodeId, first: 5 },
+  const { loading, data, fetchMore } = useQuery(GET_EPISODE_DETAILS, {
+    variables: { id: episodeId, first: 5, after: '' },
   });
 
   if (loading) {
     return (<CircularProgress />);
   }
+
+  const loadMoreData = () => {
+    const lastElmCursor = data.episode.people.edges[data.episode.people.edges.length - 1].cursor;
+
+    fetchMore({
+      variables: { first: 5, after: lastElmCursor },
+      updateQuery: (prev, { fetchMoreResult: { episode } }) => ({
+        episode: {
+          ...episode,
+          people: {
+            edges: [...prev.episode.people.edges, ...episode.people.edges],
+            pageInfo: { ...episode.people.pageInfo },
+          },
+        },
+      }),
+    });
+  };
+
+  const allCharacters = data.episode.people.edges.map(({ node: { id, name, image } }) => ({
+    id,
+    name,
+    image,
+  }));
+  const loadMoreIsVisible = data.episode.people.pageInfo.hasNextPage;
 
   return (
     <div style={{ backgroundColor: '#E8EAED', minHeight: '100vh' }}>
@@ -116,42 +138,12 @@ const Characters = () => {
             </Typography>
           </CardContent>
         </Card>
-        <Grid container display="flex" direction="row">
-          <Grid container spacing={2}>
-            {data.episode.people.edges.map((char) => (
-              <Grid item xs={12} md={4} key={char.node.name}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cover}
-                    image={char.node.image}
-                    title={char.node.name}
-                  />
-                  <CardContent className={classes.content}>
-                    <Typography component="h5" variant="h5" className={classes.name}>
-                      {char.node.name}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-          <Box display="flex" justifyContent="center" alignItems="center" flex="1">
-            <Button
-              color="primary"
-              variant="outlined"
-              size="small"
-              style={{
-                textTransform: 'none',
-                background: '#000',
-                color: '#FFE300',
-                fontSize: 20,
-                fontWeight: 900,
-              }}
-            >
-              Load More
-            </Button>
-          </Box>
-        </Grid>
+        <ListItems
+          listItems={allCharacters}
+          loadMoreIsVisible={loadMoreIsVisible}
+          loadMoreHandler={loadMoreData}
+          linkTo="characters"
+        />
       </Container>
     </div>
   );
