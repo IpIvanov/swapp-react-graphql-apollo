@@ -60,7 +60,7 @@ const Login = () => {
   }
 
   return (
-    <Container fluid="true" style={{ backgroundColor: '#000', minHeight: '100vh' }}>
+    <Container fluid="true">
       <Typography variant="h1" component="h1" style={{ fontFamily: 'SfDistantGalaxyOutline', color: '#FFE300', fontSize: 150 }}>
         SWAPP
       </Typography>
