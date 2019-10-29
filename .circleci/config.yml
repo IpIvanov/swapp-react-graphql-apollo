@@ -44,5 +44,8 @@ jobs:
       - store_artifacts:
           path: ./test-results/jest
           destination: results
+      - store_artifacts:
+          path: ./test/coverage
+          destination: coverage
       - store_test_results:
           path: ./test-results/jest
