@@ -11,6 +11,7 @@ const httpLink = createHttpLink({
   uri: process.env.REACT_APP_APOLLO_URI,
 });
 
+const cache = new InMemoryCache({ addTypename: false });
 const linkError = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
     graphQLErrors.map(({ message, locations, path }) => console.log(
@@ -19,9 +20,13 @@ const linkError = onError(({ graphQLErrors, networkError }) => {
   }
 
   if (networkError) console.log(`[Network error]: ${networkError}`);
+  cache.writeData({
+    data: {
+      authenticated: false,
+    },
+  });
 });
 
-const cache = new InMemoryCache({ addTypename: false });
 const client = new ApolloClient({
   cache,
   link: ApolloLink.from([authLink, linkError, httpLink]),

@@ -1,11 +1,6 @@
 import React from 'react';
 import './App.scss';
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Login, Characters, CharacterDetails, Episodes, EpisodeDetails, StarshipDetails } from './screens';
 import { PrivateRoute } from './components';
@@ -33,7 +28,6 @@ const App = () => {
     <div className="App" classes={classes.container}>
       <Router>
         <Switch>
-          <Route exact path="/" render={() => <Redirect to="/episodes" />} />
           <Route exact path="/login" component={Login} />
           <PrivateRoute exact path="/episodes" component={Episodes} publicRoute="/login" isAuthorized={isAuthorized} />
           <PrivateRoute exact path="/episodes/:episodeId" component={EpisodeDetails} publicRoute="/login" isAuthorized={isAuthorized} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
@@ -13,7 +13,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-import { Header } from '../components';
+import { Header, ListItems } from '../components';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -104,6 +104,12 @@ const CharacterDetails = () => {
     return (<CircularProgress />);
   }
 
+  const allStarships = data.person.starships.edges.map(({ node: { id, name, image } }) => ({
+    id,
+    name,
+    image,
+  }));
+
   return (
     <div style={{ backgroundColor: '#E8EAED', minHeight: '100vh' }}>
       <Header />
@@ -152,26 +158,11 @@ const CharacterDetails = () => {
               Piloted Starships
             </Typography>
             <Divider style={{ marginBottom: 20 }} />
-            <Grid container>
-              {data.person.starships.edges.map(({ node: { id, name, image } }) => (
-                <Grid item xs={12} key={id}>
-                  <Link to={`/starships/${id}`} style={{ textDecoration: 'none' }}>
-                    <Card className={classes.card}>
-                      <CardMedia
-                        className={classes.starshipCover}
-                        image={image}
-                        title={name}
-                      />
-                      <CardContent className={classes.content}>
-                        <Typography component="h6" variant="h6" className={classes.starshipName}>
-                          {name}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </Grid>
-              ))}
-            </Grid>
+            <ListItems
+              listItems={allStarships}
+              loadMoreIsVisible={false}
+              linkTo="starships"
+            />
           </Grid>
         </Grid>
       </Container>
