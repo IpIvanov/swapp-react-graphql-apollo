@@ -1,17 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import CircularProgress from '@material-ui/core/CircularProgress';
-
+import {
+  Card, Container, Grid, CardContent,
+  CardMedia, Typography, CircularProgress,
+} from '@material-ui/core';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-
 import { Header } from '../components';
 
 const useStyles = makeStyles({

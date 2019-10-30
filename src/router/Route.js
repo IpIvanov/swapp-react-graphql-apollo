@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import ThemeContext from './contexts/ThemeContext';
-import { Login, Characters, CharacterDetails, Episodes, EpisodeDetails, StarshipDetails } from './screens';
-import { PrivateRoute } from './components';
-import { useIsAuthorized } from './utils/useIsAuthorized';
-import useTheme from './utils/useTheme';
+import ThemeContext from '../contexts/ThemeContext';
+import { Login, Characters, CharacterDetails, Episodes, EpisodeDetails, StarshipDetails } from '../screens';
+import { PrivateRoute } from '../components';
+import { useIsAuthorized } from '../utils/useIsAuthorized';
 
 const useStyles = makeStyles((theme) => ({
   container: (props = { theme: 'dark' }) => ({
@@ -20,14 +19,14 @@ const useStyles = makeStyles((theme) => ({
   }),
 }));
 
-const App = () => {
-  const { setTheme } = useTheme(localStorage.getItem('theme'));
+const AppRouter = () => {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const classes = useStyles({ theme: localStorage.getItem('theme') === 'light' ? 'light' : 'dark' });
   const isAuthorized = useIsAuthorized();
 
   return (
     <div className={`${classes.container}`}>
-      <ThemeContext.Provider value={{ theme: (localStorage.getItem('theme') || 'light'), setTheme }}>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
         <Router>
           <Switch>
             <Route exact path="/login" component={Login} />
@@ -44,4 +43,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AppRouter;
