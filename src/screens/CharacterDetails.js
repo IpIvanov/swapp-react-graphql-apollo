@@ -1,69 +1,26 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import CircularProgress from '@material-ui/core/CircularProgress';
-
+import {
+  Container, Grid, Typography, Divider, CircularProgress,
+} from '@material-ui/core';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-
-import { Header, ListItems } from '../components';
+import { Header, ListItems, DetailsCard } from '../components';
 
 const useStyles = makeStyles(() => ({
   container: {
     marginTop: 50,
-  },
-  card: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginBottom: 20,
-  },
-  content: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-  },
-  description: {
-    textAlign: 'left',
-    marginBottom: 10,
-    padding: 0,
-  },
-  cover: {
-    width: '100%',
-    height: 420,
-  },
-  starshipCover: {
-    width: 120,
-  },
-  movieCover: {
-    width: 300,
-    height: 300,
   },
   name: {
     color: '#4BD5EE',
     fontFamily: 'SfDistantGalaxyOutline',
     fontSize: 36,
   },
-  starshipName: {
-    color: '#4BD5EE',
-    fontFamily: 'SfDistantGalaxyOutline',
-    fontSize: 24,
-  },
   starshipsTitle: {
     fontFamily: 'SfDistantGalaxyOutline',
     fontSize: 36,
     color: '#4E5B6E',
-  },
-  title: {
-    color: '#4BD5EE',
-    fontWeight: 700,
   },
 }));
 
@@ -120,38 +77,28 @@ const CharacterDetails = () => {
         <Divider style={{ marginBottom: 20 }} />
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            <Card style={{ padding: 20 }}>
-              <Typography gutterBottom variant="h5" component="h2" className={classes.title}>
-                {data.person.name}
-              </Typography>
-              <CardMedia
-                className={classes.cover}
-                image={data.person.image}
-                title={data.person.name}
-              />
-              <CardContent style={{ padding: 0, paddingTop: 10 }}>
-                <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
-                  Height:
-                  {' '}
-                  <span style={{ color: '#4BD5EE' }}>{data.person.height}</span>
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
-                  Weight:
-                  {' '}
-                  <span style={{ color: '#4BD5EE' }}>{data.person.weight ? data.person.weight : 'N/A'}</span>
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
-                  Species:
-                  {' '}
-                  <span style={{ color: '#4BD5EE' }}>{data.person.species.name}</span>
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p" className={classes.description} align="left">
-                  Home World:
-                  {' '}
-                  <span style={{ color: '#4BD5EE' }}>{data.person.homeworld.name}</span>
-                </Typography>
-              </CardContent>
-            </Card>
+            <DetailsCard
+              title={data.person.name}
+              image={data.person.image}
+              details={[
+                {
+                  key: 'Height',
+                  value: data.person.height,
+                },
+                {
+                  key: 'Weight',
+                  value: data.person.weight,
+                },
+                {
+                  key: 'Species',
+                  value: data.person.species.name,
+                },
+                {
+                  key: 'Home World',
+                  value: data.person.homeworld.name,
+                },
+              ]}
+            />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography component="h5" variant="h5" className={classes.starshipsTitle}>

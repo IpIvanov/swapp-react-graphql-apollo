@@ -17,5 +17,5 @@ code {
 
 @font-face {
   font-family: 'SfDistantGalaxyOutline';
-  src: local('SfDistantGalaxyOutline'), url(./fonts/SfDistantGalaxy-0l3d.ttf) format('truetype');
+  src: local('SfDistantGalaxyOutline'), url(./SfDistantGalaxy-0l3d.ttf) format('truetype');
 }

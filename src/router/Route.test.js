@@ -3,8 +3,8 @@ import { MockedProvider } from '@apollo/react-testing';
 import ReactDOM from 'react-dom';
 import gql from 'graphql-tag';
 import { ThemeProvider } from '@material-ui/core/styles';
-import App from './Route';
-import theme from './theme';
+import AppRouter from './Route';
+import theme from '../theme';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -29,7 +29,7 @@ it('renders without crashing', () => {
   ReactDOM.render(
     <ThemeProvider theme={theme}>
       <MockedProvider mocks={mocks} addTypename={false} resolvers={{}}>
-        <App />
+        <AppRouter />
       </MockedProvider>
     </ThemeProvider>,
     div,
