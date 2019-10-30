@@ -2,7 +2,9 @@ import React from 'react';
 import { MockedProvider } from '@apollo/react-testing';
 import ReactDOM from 'react-dom';
 import gql from 'graphql-tag';
+import { ThemeProvider } from '@material-ui/core/styles';
 import App from './Route';
+import theme from './theme';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -25,9 +27,11 @@ it('renders without crashing', () => {
   ];
 
   ReactDOM.render(
-    <MockedProvider mocks={mocks} addTypename={false} resolvers={{}}>
-      <App />
-    </MockedProvider>,
+    <ThemeProvider theme={theme}>
+      <MockedProvider mocks={mocks} addTypename={false} resolvers={{}}>
+        <App />
+      </MockedProvider>
+    </ThemeProvider>,
     div,
   );
   ReactDOM.unmountComponentAtNode(div);

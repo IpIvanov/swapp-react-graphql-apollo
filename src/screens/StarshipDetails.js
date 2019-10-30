@@ -105,7 +105,7 @@ const StarshipDetails = () => {
 
 
   return (
-    <div style={{ backgroundColor: '#E8EAED', minHeight: '100vh' }}>
+    <div>
       <Header />
       <Container maxWidth="md" className={classes.container}>
         <Typography component="h5" variant="h5" className={classes.name}>

@@ -68,7 +68,7 @@ const Characters = () => {
   const loadMoreIsVisible = data.allPeople.pageInfo.hasNextPage;
 
   return (
-    <div style={{ backgroundColor: '#E8EAED', minHeight: '100vh' }}>
+    <div>
       <Header />
       <Container maxWidth="md" className={classes.container}>
         <ListItems
