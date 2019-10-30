@@ -15,7 +15,7 @@ import gql from 'graphql-tag';
 import { Header } from '../components';
 
 const useStyles = makeStyles({
-  container: {
+  innerContainer: {
     marginTop: 50,
   },
   title: {
@@ -72,9 +72,9 @@ const Episodes = () => {
   }));
 
   return (
-    <div style={{ backgroundColor: '#E8EAED', minHeight: '100vh' }}>
+    <div>
       <Header />
-      <Container maxWidth="md" className={classes.container}>
+      <Container maxWidth="md" className={classes.innerContainer}>
         <Grid container display="flex" direction="column">
           <Grid container spacing={10}>
             {episodes.map((episode) => (

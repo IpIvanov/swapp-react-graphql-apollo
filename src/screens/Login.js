@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
   TextField, Button, Container, FormGroup,
@@ -6,6 +6,7 @@ import {
 } from '@material-ui/core';
 import { useApolloClient, useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
+import ThemeContext from '../contexts/ThemeContext';
 
 const SIGN_IN = gql`
   mutation SignIn($email: String!, $password: String!) {
@@ -19,6 +20,9 @@ const Login = () => {
   const history = useHistory();
   const client = useApolloClient();
   const [errorMessage, setErrorMessage] = useState(null);
+  const {
+    setTheme,
+  } = useContext(ThemeContext);
 
   const [login, { loading }] = useMutation(SIGN_IN, {
     onCompleted: ({ signIn: { token } }) => {
@@ -30,7 +34,6 @@ const Login = () => {
       setErrorMessage('Invalid credentials!');
     },
   });
-
 
   const [values, setValues] = useState({
     email: '',
@@ -61,7 +64,16 @@ const Login = () => {
 
   return (
     <Container fluid="true">
-      <Typography variant="h1" component="h1" style={{ fontFamily: 'SfDistantGalaxyOutline', color: '#FFE300', fontSize: 150 }}>
+      <Typography
+        variant="h1"
+        component="h1"
+        style={{ fontFamily: 'SfDistantGalaxyOutline', color: '#FFE300', fontSize: 150 }}
+        onClick={() => {
+          const themeStorage = localStorage.getItem('theme') === 'light' ? 'dark' : 'light';
+          setTheme(themeStorage);
+          localStorage.setItem('theme', themeStorage);
+        }}
+      >
         SWAPP
       </Typography>
       <Container maxWidth="md">
