@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { makeStyles, Typography, Card, Grid, Box, Button, CardMedia, CardContent } from '@material-ui/core';
 import styles from './styles';
@@ -45,6 +46,14 @@ const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkTo, mdCo
       )}
     </Grid>
   );
+};
+
+ListItems.propTypes = {
+  listItems: PropTypes.array.isRequired,
+  loadMoreIsVisible: PropTypes.bool.isRequired,
+  loadMoreHandler: PropTypes.bool.isRequired,
+  linkTo: PropTypes.string.isRequired,
+  mdColumns: PropTypes.string.isRequired,
 };
 
 export default ListItems;
