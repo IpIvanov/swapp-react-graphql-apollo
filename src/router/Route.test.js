@@ -3,7 +3,7 @@ import { MockedProvider } from '@apollo/react-testing';
 import ReactDOM from 'react-dom';
 import gql from 'graphql-tag';
 import { ThemeProvider } from '@material-ui/core/styles';
-import AppRouter from './Route';
+import AppRouter from './index';
 import theme from '../theme';
 
 it('renders without crashing', () => {

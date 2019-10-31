@@ -4,7 +4,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { ApolloProvider } from '@apollo/react-hooks';
 import client from './client';
 import './fonts/fonts.css';
-import AppRouter from './router/Route';
+import AppRouter from './router';
 import theme from './theme';
 
 ReactDOM.render(

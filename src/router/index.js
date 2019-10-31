@@ -5,24 +5,11 @@ import ThemeContext from '../contexts/ThemeContext';
 import { Login, Characters, CharacterDetails, Episodes, EpisodeDetails, StarshipDetails } from '../screens';
 import { PrivateRoute } from '../components';
 import { useIsAuthorized } from '../utils/useIsAuthorized';
-
-const useStyles = makeStyles((theme) => ({
-  container: (props = { theme: 'dark' }) => ({
-    backgroundColor: theme.palette[props.theme].backgroundColor || '#000',
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    flexDirection: 'column',
-    alignContent: 'center',
-    minHeight: '100vh',
-    minWidth: '100%',
-    textAlign: 'center',
-  }),
-}));
+import styles from './styles';
 
 const AppRouter = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-  const classes = useStyles({ theme: localStorage.getItem('theme') === 'light' ? 'light' : 'dark' });
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+  const classes = makeStyles(styles)({ theme: theme === 'light' ? 'light' : 'dark' });
   const isAuthorized = useIsAuthorized();
 
   return (
