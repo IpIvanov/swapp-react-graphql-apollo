@@ -1,14 +1,9 @@
 const styles = () => ({
   card: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginBottom: 20,
+    padding: 20,
   },
   content: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
+    padding: 0, paddingTop: 10,
   },
   description: {
     textAlign: 'left',
@@ -19,13 +14,11 @@ const styles = () => ({
     width: '100%',
     height: 420,
   },
-  starshipCover: {
-    width: 120,
-  },
   title: {
     color: '#4BD5EE',
     fontWeight: 700,
   },
+  detailValue: { color: '#4BD5EE' },
 });
 
 export default styles;

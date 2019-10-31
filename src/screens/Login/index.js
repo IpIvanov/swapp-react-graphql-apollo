@@ -4,19 +4,14 @@ import {
   TextField, Button, Container, FormGroup,
   Box, Grid, Typography, Paper, CircularProgress,
 } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { useApolloClient, useMutation } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-import ThemeContext from '../contexts/ThemeContext';
-
-const SIGN_IN = gql`
-  mutation SignIn($email: String!, $password: String!) {
-    signIn(email: $email, password: $password) {
-      token
-    }
-  }
-`;
+import ThemeContext from '../../contexts/ThemeContext';
+import { SIGN_IN } from '../../client/queries';
+import styles from './styles';
 
 const Login = () => {
+  const classes = makeStyles(styles)();
   const history = useHistory();
   const client = useApolloClient();
   const [errorMessage, setErrorMessage] = useState(null);
@@ -67,7 +62,7 @@ const Login = () => {
       <Typography
         variant="h1"
         component="h1"
-        style={{ fontFamily: 'SfDistantGalaxyOutline', color: '#FFE300', fontSize: 150 }}
+        className={classes.mainTitle}
         onClick={() => {
           const themeStorage = localStorage.getItem('theme') === 'light' ? 'dark' : 'light';
           setTheme(themeStorage);
@@ -82,7 +77,7 @@ const Login = () => {
             <Grid container spacing={5} display="flex" direction="column">
               {errorMessage && (
                 <Grid item xs>
-                  <Typography component="h5" variant="h5" style={{ color: 'red' }} align="left">
+                  <Typography component="h5" variant="h5" className={classes.error} align="left">
                     {errorMessage}
                   </Typography>
                 </Grid>
@@ -112,13 +107,7 @@ const Login = () => {
                     color="primary"
                     variant="outlined"
                     size="large"
-                    style={{
-                      textTransform: 'none',
-                      background: '#000',
-                      color: '#FFE300',
-                      fontSize: 36,
-                      fontWeight: 900,
-                    }}
+                    className={classes.loginButton}
                     onClick={userLogin}
                   >
                     Login

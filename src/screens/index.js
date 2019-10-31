@@ -5,4 +5,11 @@ import Login from './Login';
 import CharacterDetails from './CharacterDetails';
 import StarshipDetails from './StarshipDetails';
 
-export { Episodes, Characters, Login, CharacterDetails, EpisodeDetails, StarshipDetails };
+export {
+  Episodes,
+  Characters,
+  Login,
+  CharacterDetails,
+  EpisodeDetails,
+  StarshipDetails,
+};
