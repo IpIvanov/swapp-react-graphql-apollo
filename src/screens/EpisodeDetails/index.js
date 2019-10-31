@@ -1,69 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
 import { Card, Container, CardContent, CardMedia, Typography, CircularProgress } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-import { Header, ListItems } from '../components';
-
-const useStyles = makeStyles(() => ({
-  container: {
-    marginTop: 50,
-  },
-  card: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginBottom: 20,
-  },
-  content: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-  },
-  description: {
-    textAlign: 'left',
-    marginBottom: 10,
-  },
-  movieCover: {
-    width: 300,
-    height: 300,
-  },
-  name: {
-    color: '#4BD5EE',
-    fontFamily: 'SfDistantGalaxyOutline',
-    textTransform: 'none',
-    fontSize: 22,
-  },
-}));
-
-const GET_EPISODE_DETAILS = gql`
-  query getEpisodeDetails($id: ID!, $first: Int!, $after: String!) {
-    episode(id: $id){
-      title
-      image
-      openingCrawl
-      director
-      releaseDate
-      people(first: $first, after: $after) {
-        pageInfo {
-          hasNextPage
-        }
-        edges {
-          cursor
-          node {
-            id
-            name
-            image
-          }
-        }
-      }
-    }
-  }
-`;
+import { Header, ListItems } from '../../components';
+import { GET_EPISODE_DETAILS } from '../../client/queries';
+import styles from './styles';
 
 const Characters = () => {
-  const classes = useStyles();
+  const classes = makeStyles(styles)();
   const { episodeId } = useParams();
 
   const { loading, data, fetchMore } = useQuery(GET_EPISODE_DETAILS, {
@@ -99,7 +44,7 @@ const Characters = () => {
   const loadMoreIsVisible = data.episode.people.pageInfo.hasNextPage;
 
   return (
-    <div>
+    <div className={classes.wrapper}>
       <Header />
       <Container maxWidth="md" className={classes.container}>
         <Card className={classes.card}>
@@ -122,12 +67,12 @@ const Characters = () => {
             <Typography component="p" variant="body1" align="left">
               Director:
               {' '}
-              <span style={{ color: '#4BD5EE' }}>{data.episode.director}</span>
+              <span className={classes.textColor}>{data.episode.director}</span>
             </Typography>
             <Typography component="p" variant="body1" align="left">
               Release data:
               {' '}
-              <span style={{ color: '#4BD5EE' }}>{data.episode.releaseDate}</span>
+              <span className={classes.textColor}>{data.episode.releaseDate}</span>
             </Typography>
           </CardContent>
         </Card>

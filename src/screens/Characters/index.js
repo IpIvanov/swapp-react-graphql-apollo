@@ -1,36 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Container, CircularProgress } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-import { Header, ListItems } from '../components';
-
-const useStyles = makeStyles(() => ({
-  container: {
-    marginTop: 50,
-  },
-}));
-
-const GET_CHARACTERS = gql`
-  query getCharacters($first: Int!, $after: String!) {
-    allPeople(first: $first, after: $after) {
-      pageInfo {
-        hasNextPage
-      }
-      edges {
-        cursor
-        node {
-          id
-          name
-          image
-        }
-      }
-    }
-  }
-`;
+import { Header, ListItems } from '../../components';
+import { GET_CHARACTERS } from '../../client/queries';
+import styles from './styles';
 
 const Characters = () => {
-  const classes = useStyles();
+  const classes = makeStyles(styles)();
 
   const { loading, data, fetchMore } = useQuery(GET_CHARACTERS, {
     variables: { first: 12, after: '' },
@@ -65,9 +42,9 @@ const Characters = () => {
   const loadMoreIsVisible = data.allPeople.pageInfo.hasNextPage;
 
   return (
-    <div>
+    <div className={classes.wrapper}>
       <Header />
-      <Container maxWidth="md" className={classes.container}>
+      <Container fluid="true" className={classes.container}>
         <ListItems
           listItems={allCharacters}
           loadMoreIsVisible={loadMoreIsVisible}

@@ -1,55 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
 import {
   Card, Container, Grid, CardContent,
   CardMedia, Typography, CircularProgress,
 } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-import { Header } from '../components';
-
-const useStyles = makeStyles({
-  innerContainer: {
-    marginTop: 50,
-  },
-  title: {
-    textAlign: 'left',
-    color: '#4BD5EE',
-    fontFamily: 'SfDistantGalaxyOutline',
-    textTransform: 'none',
-    fontSize: 22,
-  },
-  description: {
-    overFlow: 'hidden',
-    textAlign: 'left',
-  },
-  card: {
-    maxHeight: 400,
-    marginBottom: 20,
-  },
-  media: {
-    height: 180,
-  },
-});
-
-const GET_EPISODES = gql`
-  query getEpisodes($first: Int!) {
-    allEpisodes(first: $first) {
-      edges{
-        node{
-          id
-          image
-          title
-          openingCrawl
-        }
-      }
-    }
-  }
-`;
+import { Header } from '../../components';
+import { GET_EPISODES } from '../../client/queries';
+import styles from './styles';
 
 const Episodes = () => {
-  const classes = useStyles();
+  const classes = makeStyles(styles)();
 
   const { loading, data } = useQuery(GET_EPISODES, {
     variables: { first: 10 },
@@ -67,14 +29,14 @@ const Episodes = () => {
   }));
 
   return (
-    <div>
+    <div className={classes.wrapper}>
       <Header />
       <Container maxWidth="md" className={classes.innerContainer}>
         <Grid container display="flex" direction="column">
           <Grid container spacing={10}>
             {episodes.map((episode) => (
               <Grid item xs={12} sm={6} md={4} key={episode.id}>
-                <Link to={`/episodes/${episode.id}`} style={{ textDecoration: 'none' }}>
+                <Link to={`/episodes/${episode.id}`} className={classes.linkTo}>
                   <Card className={classes.card}>
                     <CardMedia
                       className={classes.media}

@@ -12,7 +12,7 @@ const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkTo, mdCo
       <Grid container spacing={2}>
         {listItems.map(({ name, id, image }, i) => (
           <Grid item xs={12} md={mdColumns} key={i.toString()}>
-            <Link to={`/${linkTo}/${id}`} style={{ textDecoration: 'none' }}>
+            <Link to={`/${linkTo}/${id}`} className={classes.linkTo}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cover}

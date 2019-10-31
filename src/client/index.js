@@ -20,6 +20,7 @@ const linkError = onError(({ graphQLErrors, networkError }) => {
   }
 
   if (networkError) console.log(`[Network error]: ${networkError}`);
+
   cache.writeData({
     data: {
       authenticated: false,

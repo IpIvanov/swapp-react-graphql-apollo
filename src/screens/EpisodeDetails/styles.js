@@ -1,4 +1,10 @@
-const styles = {
+const styles = () => ({
+  wrapper: {
+    minWidth: '100%',
+  },
+  container: {
+    marginTop: 50,
+  },
   card: {
     display: 'flex',
     flexDirection: 'row',
@@ -8,10 +14,15 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    flex: 1,
   },
-  cover: {
-    width: 100,
-    height: 120,
+  description: {
+    textAlign: 'left',
+    marginBottom: 10,
+  },
+  movieCover: {
+    width: 300,
+    height: 300,
   },
   name: {
     color: '#4BD5EE',
@@ -19,14 +30,7 @@ const styles = {
     textTransform: 'none',
     fontSize: 22,
   },
-  button: {
-    textTransform: 'none',
-    background: '#000',
-    color: '#FFE300',
-    fontSize: 20,
-    fontWeight: 900,
-  },
-  linkTo: { textDecoration: 'none' },
-};
+  textColor: { color: '#4BD5EE' },
+});
 
 export default styles;

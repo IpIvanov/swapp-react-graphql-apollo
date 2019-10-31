@@ -11,7 +11,7 @@ const DetailsCard = ({ title, image, details }) => {
   const classes = useStyles({ theme });
 
   return (
-    <Card style={{ padding: 20 }}>
+    <Card className={classes.card}>
       <Typography gutterBottom variant="h5" component="h2" className={classes.title}>
         {title}
       </Typography>
@@ -20,7 +20,7 @@ const DetailsCard = ({ title, image, details }) => {
         image={image}
         title={title}
       />
-      <CardContent style={{ padding: 0, paddingTop: 10 }}>
+      <CardContent className={classes.content}>
         {details.map((detail) => (
           <Typography
             variant="body2"
@@ -31,7 +31,7 @@ const DetailsCard = ({ title, image, details }) => {
             key={detail.key}
           >
             {`${detail.key} `}
-            <span style={{ color: '#4BD5EE' }}>{detail.value}</span>
+            <span className={classes.detailValue}>{detail.value}</span>
           </Typography>
         ))}
       </CardContent>

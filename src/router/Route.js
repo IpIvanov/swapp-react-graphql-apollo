@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignContent: 'center',
     minHeight: '100vh',
+    minWidth: '100%',
     textAlign: 'center',
   }),
 }));
