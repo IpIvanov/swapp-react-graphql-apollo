@@ -1,5 +1,9 @@
 # SWAPP (Star Wars App)
 
+## Build CircleCI
+
+[![CircleCI](https://circleci.com/gh/IpIvanov/swapp-react-graphql-apollo/tree/master.svg?style=svg&circle-token=e4f3fafb62f9ea78c9c5aa00f826a7fcd4bbe97c)](https://circleci.com/gh/IpIvanov/swapp-react-graphql-apollo/tree/master)
+
 ## Specification
 
 ## Info
