@@ -3,8 +3,8 @@ import { MockedProvider } from '@apollo/react-testing';
 import ReactDOM from 'react-dom';
 import gql from 'graphql-tag';
 import { ThemeProvider } from '@material-ui/core/styles';
-import AppRouter from './index';
-import theme from '../theme';
+import AppRouter from '../../router';
+import theme from '../../theme';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

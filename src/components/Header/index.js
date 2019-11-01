@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import { useHistory, withRouter, NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useApolloClient } from '@apollo/react-hooks';
 import { Input } from '@material-ui/icons';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Typography, Link } from '@material-ui/core';
 import styles from './styles';
 import ThemeContext from '../../contexts/ThemeContext';
 
@@ -17,40 +16,54 @@ const Header = () => {
   const history = useHistory();
   const client = useApolloClient();
 
+  const linkTo = (e, route) => {
+    e.preventDefault();
+    history.push(route);
+  };
+
+  const logOut = () => {
+    client.writeData({ data: { authenticated: false } });
+    history.push('/');
+  };
+
+  const toggleTheme = () => {
+    const themeStorage = localStorage.getItem('theme') === 'light' ? 'dark' : 'light';
+    setTheme(themeStorage);
+    localStorage.setItem('theme', themeStorage);
+  };
 
   return (
     <div className={`${classes.container}`}>
       <Typography
         className={classes.linkHome}
-        onClick={() => {
-          const themeStorage = localStorage.getItem('theme') === 'light' ? 'dark' : 'light';
-          setTheme(themeStorage);
-          localStorage.setItem('theme', themeStorage);
-        }}
+        onClick={toggleTheme}
       >
         SWAPP
       </Typography>
       <div className={classes.rightHeader}>
-        <NavLink
-          to="/episodes"
+        <Link
+          href="/"
           className={classes.link}
           underline="none"
+          onClick={(e) => {
+            linkTo(e, '/episodes');
+          }}
         >
           Episodes
-        </NavLink>
-        <NavLink
-          to="/characters"
+        </Link>
+        <Link
+          href="/"
           className={classes.link}
           underline="none"
+          onClick={(e) => {
+            linkTo(e, '/characters');
+          }}
         >
           Characters
-        </NavLink>
+        </Link>
         <div className={classes.exit}>
           <Input
-            onClick={() => {
-              client.writeData({ data: { authenticated: false } });
-              history.push('/');
-            }}
+            onClick={logOut}
           />
         </div>
       </div>
@@ -58,4 +71,4 @@ const Header = () => {
   );
 };
 
-export default withRouter(Header);
+export default Header;

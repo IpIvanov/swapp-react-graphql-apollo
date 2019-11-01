@@ -51,9 +51,13 @@ const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkTo, mdCo
 ListItems.propTypes = {
   listItems: PropTypes.array.isRequired,
   loadMoreIsVisible: PropTypes.bool.isRequired,
-  loadMoreHandler: PropTypes.bool.isRequired,
+  loadMoreHandler: PropTypes.func,
   linkTo: PropTypes.string.isRequired,
-  mdColumns: PropTypes.string.isRequired,
+  mdColumns: PropTypes.number.isRequired,
+};
+
+ListItems.defaultProps = {
+  loadMoreHandler: () => { },
 };
 
 export default ListItems;

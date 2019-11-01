@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components | ListItems renders without crashing 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  direction="row"
+  display="flex"
+>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={2}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="0"
+      md={4}
+      xs={12}
+    >
+      <Link
+        className="makeStyles-linkTo-6"
+        to="//some-route/people.1"
+      >
+        <WithStyles(ForwardRef(Card))
+          className="makeStyles-card-1"
+        >
+          <WithStyles(ForwardRef(CardMedia))
+            className="makeStyles-cover-3"
+            image="image-link.jpeg"
+            src="Luke Skywalker"
+            title="Luke Skywalker"
+          />
+          <WithStyles(ForwardRef(CardContent))
+            className="makeStyles-content-2"
+          >
+            <WithStyles(ForwardRef(Typography))
+              className="makeStyles-name-4"
+              component="h5"
+              variant="h5"
+            >
+              Luke Skywalker
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(CardContent))>
+        </WithStyles(ForwardRef(Card))>
+      </Link>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="1"
+      md={4}
+      xs={12}
+    >
+      <Link
+        className="makeStyles-linkTo-6"
+        to="//some-route/people.1"
+      >
+        <WithStyles(ForwardRef(Card))
+          className="makeStyles-card-1"
+        >
+          <WithStyles(ForwardRef(CardMedia))
+            className="makeStyles-cover-3"
+            image="image-link.jpeg"
+            src="Luke Skywalker"
+            title="Luke Skywalker"
+          />
+          <WithStyles(ForwardRef(CardContent))
+            className="makeStyles-content-2"
+          >
+            <WithStyles(ForwardRef(Typography))
+              className="makeStyles-name-4"
+              component="h5"
+              variant="h5"
+            >
+              Luke Skywalker
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(CardContent))>
+        </WithStyles(ForwardRef(Card))>
+      </Link>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <Styled(MuiBox)
+    alignItems="center"
+    display="flex"
+    flex="1"
+    justifyContent="center"
+  >
+    <WithStyles(ForwardRef(Button))
+      className="makeStyles-button-5"
+      color="primary"
+      onClick={[Function]}
+      size="small"
+      variant="outlined"
+    >
+      Load More
+    </WithStyles(ForwardRef(Button))>
+  </Styled(MuiBox)>
+</WithStyles(ForwardRef(Grid))>
+`;

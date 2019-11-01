@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="0" time="12.543">
+  <testsuite name="src\__tests__\components\ListItems.test.js" errors="0" failures="0" skipped="0" timestamp="2019-11-01T15:11:04" time="10.154" tests="1">
+    <testcase classname="Components | ListItems - renders without crashing" name="Components | ListItems - renders without crashing" time="0.027">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\DetailsCard.test.js" errors="0" failures="0" skipped="0" timestamp="2019-11-01T15:11:04" time="10.249" tests="1">
+    <testcase classname="Components | DetailsCard - renders without crashing" name="Components | DetailsCard - renders without crashing" time="0.057">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\Header.test.js" errors="0" failures="0" skipped="0" timestamp="2019-11-01T15:11:04" time="10.269" tests="1">
+    <testcase classname="Components | Header - renders without crashing" name="Components | Header - renders without crashing" time="0.066">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\router\index.test.js" errors="0" failures="0" skipped="0" timestamp="2019-11-01T15:11:04" time="10.394" tests="1">
+    <testcase classname=" - renders without crashing" name=" - renders without crashing" time="0.106">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\screens\CharacterDetails.test.js" errors="0" failures="0" skipped="0" timestamp="2019-11-01T15:11:04" time="10.399" tests="1">
+    <testcase classname="Screens | CharacterDetails - renders without crashing" name="Screens | CharacterDetails - renders without crashing" time="0.048">
+    </testcase>
+  </testsuite>
+</testsuites>
