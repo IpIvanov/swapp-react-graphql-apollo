@@ -3,6 +3,12 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { ListItems } from '../../components';
 
+jest.mock('react-router-dom', () => ({
+  useHistory: () => ({
+    push: jest.fn(),
+  }),
+}));
+
 describe('Components | ListItems', () => {
   it('renders without crashing', () => {
     const listItemsMock = [{
@@ -18,7 +24,7 @@ describe('Components | ListItems', () => {
       listItems={listItemsMock}
       loadMoreIsVisible
       loadMoreHandler={() => { }}
-      linkTo="/some-route"
+      linkToUrl="/some-route"
       mdColumns={4}
     />);
 

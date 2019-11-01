@@ -16,9 +16,11 @@ exports[`Components | ListItems renders without crashing 1`] = `
       md={4}
       xs={12}
     >
-      <Link
+      <WithStyles(ForwardRef(Link))
         className="makeStyles-linkTo-6"
-        to="//some-route/people.1"
+        href="/"
+        onClick={[Function]}
+        underline="none"
       >
         <WithStyles(ForwardRef(Card))
           className="makeStyles-card-1"
@@ -41,7 +43,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
             </WithStyles(ForwardRef(Typography))>
           </WithStyles(ForwardRef(CardContent))>
         </WithStyles(ForwardRef(Card))>
-      </Link>
+      </WithStyles(ForwardRef(Link))>
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -49,9 +51,11 @@ exports[`Components | ListItems renders without crashing 1`] = `
       md={4}
       xs={12}
     >
-      <Link
+      <WithStyles(ForwardRef(Link))
         className="makeStyles-linkTo-6"
-        to="//some-route/people.1"
+        href="/"
+        onClick={[Function]}
+        underline="none"
       >
         <WithStyles(ForwardRef(Card))
           className="makeStyles-card-1"
@@ -74,7 +78,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
             </WithStyles(ForwardRef(Typography))>
           </WithStyles(ForwardRef(CardContent))>
         </WithStyles(ForwardRef(Card))>
-      </Link>
+      </WithStyles(ForwardRef(Link))>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <Styled(MuiBox)

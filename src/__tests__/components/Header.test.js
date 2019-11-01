@@ -5,6 +5,9 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import ThemeContext from '../../contexts/ThemeContext';
 import { Header } from '../../components';
 
+// const mountWithTheme = (children) => mount(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
+// const renderWithTheme = (children) => render(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
+// const shallowWithTheme = (children) => shallow(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
 jest.mock('react-router-dom', () => ({
   useHistory: () => ({
     push: jest.fn(),
@@ -16,12 +19,6 @@ jest.mock('@apollo/react-hooks', () => ({
     writeData: jest.fn(),
   }),
 }));
-
-// const mountWithTheme = (children) => mount(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
-
-// const renderWithTheme = (children) => render(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
-
-// const shallowWithTheme = (children) => shallow(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
 
 describe('Components | Header', () => {
   let theme;

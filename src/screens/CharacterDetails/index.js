@@ -68,7 +68,7 @@ const CharacterDetails = () => {
             <ListItems
               listItems={allStarships}
               loadMoreIsVisible={false}
-              linkTo="starships"
+              linkToUrl="starships"
               mdColumns={12}
             />
           </Grid>

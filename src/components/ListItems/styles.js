@@ -26,7 +26,9 @@ const styles = {
     fontSize: 20,
     fontWeight: 900,
   },
-  linkTo: { textDecoration: 'none' },
+  linkTo: {
+    textDecoration: 'none',
+  },
 };
 
 export default styles;

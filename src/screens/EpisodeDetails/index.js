@@ -80,7 +80,7 @@ const Characters = () => {
           listItems={allCharacters}
           loadMoreIsVisible={loadMoreIsVisible}
           loadMoreHandler={loadMoreData}
-          linkTo="characters"
+          linkToUrl="characters"
           mdColumns={4}
         />
       </Container>
