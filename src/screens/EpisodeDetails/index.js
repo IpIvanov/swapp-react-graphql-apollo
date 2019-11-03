@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Card, Container, CardContent, CardMedia, Typography, CircularProgress } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useQuery } from '@apollo/react-hooks';
 import { Header, ListItems } from '../../components';
 import { GET_EPISODE_DETAILS } from '../../client/queries';
+import ThemeContext from '../../contexts/ThemeContext';
 import styles from './styles';
 
 const Characters = () => {
-  const classes = makeStyles(styles)();
+  const {
+    theme,
+  } = useContext(ThemeContext);
+  const classes = makeStyles(styles)({ theme });
   const { episodeId } = useParams();
 
   const { loading, data, fetchMore } = useQuery(GET_EPISODE_DETAILS, {
@@ -80,7 +84,7 @@ const Characters = () => {
           listItems={allCharacters}
           loadMoreIsVisible={loadMoreIsVisible}
           loadMoreHandler={loadMoreData}
-          linkTo="characters"
+          linkToUrl="characters"
           mdColumns={4}
         />
       </Container>

@@ -33,7 +33,7 @@ const styles = (theme) => ({
     padding: 3,
     borderRadius: 3,
     textDecoration: 'none',
-    backgroundColor: '#fff',
+    backgroundColor: theme.palette.commonColors.white,
     color: theme.palette[props.theme].AppBar.fontColor,
     '&:hover': {
       cursor: 'pointer',

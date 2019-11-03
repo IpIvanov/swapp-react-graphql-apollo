@@ -31,8 +31,12 @@ const DetailsCard = ({ title, image, details }) => {
             align="left"
             key={detail.key}
           >
-            {`${detail.key} `}
-            <span className={classes.detailValue}>{detail.value}</span>
+            {`${detail.key}: `}
+            <span className={classes.detailValue}>
+              {detail.value}
+              {' '}
+              {detail.key === 'Cost' && 'credits'}
+            </span>
           </Typography>
         ))}
       </CardContent>

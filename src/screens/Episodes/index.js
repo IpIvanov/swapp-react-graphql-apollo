@@ -1,17 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
-  Card, Container, Grid, CardContent,
+  Card, Container, Grid, CardContent, Link,
   CardMedia, Typography, CircularProgress,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useQuery } from '@apollo/react-hooks';
 import { Header } from '../../components';
 import { GET_EPISODES } from '../../client/queries';
+import ThemeContext from '../../contexts/ThemeContext';
 import styles from './styles';
 
 const Episodes = () => {
-  const classes = makeStyles(styles)();
+  const {
+    theme,
+  } = useContext(ThemeContext);
+  const classes = makeStyles(styles)({ theme });
+  const history = useHistory();
+  const linkTo = (e, route) => {
+    e.preventDefault();
+    history.push(route);
+  };
 
   const { loading, data } = useQuery(GET_EPISODES, {
     variables: { first: 10 },
@@ -36,7 +45,14 @@ const Episodes = () => {
           <Grid container spacing={10}>
             {episodes.map((episode) => (
               <Grid item xs={12} sm={6} md={4} key={episode.id}>
-                <Link to={`/episodes/${episode.id}`} className={classes.linkTo}>
+                <Link
+                  href="/"
+                  onClick={(e) => {
+                    linkTo(e, `/episodes/${episode.id}`);
+                  }}
+                  className={classes.linkTo}
+                  underline="none"
+                >
                   <Card className={classes.card}>
                     <CardMedia
                       className={classes.media}

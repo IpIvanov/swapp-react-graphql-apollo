@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { makeStyles, Typography, Card, Grid, Box, Button, CardMedia, CardContent } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
+import { makeStyles, Link, Typography, Card, Grid, Box, Button, CardMedia, CardContent } from '@material-ui/core';
 import styles from './styles';
+import ThemeContext from '../../contexts/ThemeContext';
 
-const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkTo, mdColumns }) => {
+const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkToUrl, mdColumns }) => {
+  const {
+    theme,
+  } = useContext(ThemeContext);
   const useStyles = makeStyles(styles);
-  const classes = useStyles();
+  const classes = useStyles({ theme });
+  const history = useHistory();
+  const linkTo = (e, route) => {
+    e.preventDefault();
+    history.push(route);
+  };
 
   return (
     <Grid container display="flex" direction="row">
       <Grid container spacing={2}>
         {listItems.map(({ name, id, image }, i) => (
           <Grid item xs={12} md={mdColumns} key={i.toString()}>
-            <Link to={`/${linkTo}/${id}`} className={classes.linkTo}>
+            <Link
+              href="/"
+              onClick={(e) => {
+                linkTo(e, `/${linkToUrl}/${id}`);
+              }}
+              className={classes.linkTo}
+              underline="none"
+            >
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cover}
@@ -49,11 +65,19 @@ const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkTo, mdCo
 };
 
 ListItems.propTypes = {
-  listItems: PropTypes.array.isRequired,
-  loadMoreIsVisible: PropTypes.bool.isRequired,
-  loadMoreHandler: PropTypes.bool.isRequired,
-  linkTo: PropTypes.string.isRequired,
-  mdColumns: PropTypes.string.isRequired,
+  listItems: PropTypes.array,
+  loadMoreIsVisible: PropTypes.bool,
+  loadMoreHandler: PropTypes.func,
+  linkToUrl: PropTypes.string,
+  mdColumns: PropTypes.number,
+};
+
+ListItems.defaultProps = {
+  listItems: [],
+  loadMoreIsVisible: false,
+  loadMoreHandler: () => { },
+  linkToUrl: '/test',
+  mdColumns: 4,
 };
 
 export default ListItems;

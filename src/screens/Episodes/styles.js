@@ -1,17 +1,17 @@
-const styles = () => ({
+const styles = (theme) => ({
   wrapper: {
     minWidth: '100%',
   },
   innerContainer: {
     marginTop: 50,
   },
-  title: {
+  title: (props) => ({
     textAlign: 'left',
-    color: '#4BD5EE',
+    color: theme.palette[props.theme].PrimaryHeading.fontColor,
     fontFamily: 'SfDistantGalaxyOutline',
     textTransform: 'none',
     fontSize: 22,
-  },
+  }),
   description: {
     overFlow: 'hidden',
     textAlign: 'left',
