@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   Container, Grid, Typography, Divider, CircularProgress,
@@ -7,10 +7,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useQuery } from '@apollo/react-hooks';
 import { Header, ListItems, DetailsCard } from '../../components';
 import { GET_CHARACTER_DETAILS } from '../../client/queries';
+import ThemeContext from '../../contexts/ThemeContext';
 import styles from './styles';
 
 const CharacterDetails = () => {
-  const classes = makeStyles(styles)();
+  const {
+    theme,
+  } = useContext(ThemeContext);
+  const classes = makeStyles(styles)({ theme });
   const { characterId } = useParams();
 
   const { loading, data } = useQuery(GET_CHARACTER_DETAILS, {

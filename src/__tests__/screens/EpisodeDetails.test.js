@@ -4,11 +4,11 @@ import { MockedProvider } from '@apollo/react-testing';
 import { mount } from 'enzyme';
 import { ThemeProvider } from '@material-ui/core/styles';
 import ThemeContext from '../../contexts/ThemeContext';
-import { CharacterDetails } from '../../screens';
+import { EpisodeDetails } from '../../screens';
 
 jest.mock('react-router-dom', () => ({
   useParams: () => ({
-    characterId: 'person.1',
+    characterId: 'episode.1',
   }),
   useHistory: () => ({
     push: jest.fn(),
@@ -22,27 +22,33 @@ jest.mock('@apollo/react-hooks', () => ({
   useQuery: () => ({
     loading: false,
     data: {
-      person: {
-        height: 172,
-        homeworld: { name: 'Tatooine' },
-        image: 'test-image.jpg',
-        name: 'Luke Skywalker',
-        species: { name: 'Human' },
-        starships: {
-          edges: [{
-            node: {
-              id: 'starships.12',
-              image: 'starship-image.jpg',
-              name: 'X-wing',
-            },
-          }],
+      episode: {
+        title: 'Test title',
+        image: 'test.jpg',
+        openingCrawl: 'Opening crawl...',
+        director: 'Test Director',
+        releaseDate: '1983-05-25',
+        people: {
+          pageInfo:
+          {
+            hasNextPage: false,
+          },
+          edges: [
+            {
+              cursor: 'Y3Vyc29yLnBlb3BsZS4x',
+              node: {
+                id: 'people.1',
+                name: 'Luke Skywalker',
+                image: 'test-image.jpg',
+              },
+            }],
         },
       },
     },
   }),
 }));
 
-describe('Screens | CharacterDetails', () => {
+describe('Screens | Episode', () => {
   let theme;
 
   beforeEach(() => {
@@ -54,7 +60,7 @@ describe('Screens | CharacterDetails', () => {
       <ThemeProvider theme={theme.default}>
         <MockedProvider addTypename={false} resolvers={{}}>
           <ThemeContext.Provider value={{ theme: 'dark', setTheme: () => { } }}>
-            <CharacterDetails />
+            <EpisodeDetails />
           </ThemeContext.Provider>
         </MockedProvider>
       </ThemeProvider>,

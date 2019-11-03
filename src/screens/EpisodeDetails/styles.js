@@ -1,4 +1,4 @@
-const styles = () => ({
+const styles = (theme) => ({
   wrapper: {
     minWidth: '100%',
   },
@@ -24,13 +24,13 @@ const styles = () => ({
     width: 300,
     height: 300,
   },
-  name: {
-    color: '#4BD5EE',
+  name: (props) => ({
+    color: theme.palette[props.theme].PrimaryHeading.fontColor,
     fontFamily: 'SfDistantGalaxyOutline',
     textTransform: 'none',
     fontSize: 22,
-  },
-  textColor: { color: '#4BD5EE' },
+  }),
+  textColor: (props) => ({ color: theme.palette[props.theme].PrimaryHeading.fontColor }),
 });
 
 export default styles;

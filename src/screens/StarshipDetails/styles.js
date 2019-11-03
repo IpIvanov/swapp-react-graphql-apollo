@@ -1,19 +1,18 @@
-const styles = () => ({
+const styles = (theme) => ({
   wrapper: {
     minWidth: '100%',
   },
   container: {
     marginTop: 50,
   },
-  name: {
-    color: '#4BD5EE',
+  name: (props) => ({
+    color: theme.palette[props.theme].PrimaryHeading.fontColor,
     fontFamily: 'SfDistantGalaxyOutline',
     fontSize: 36,
-  },
+  }),
   starshipsTitle: {
     fontFamily: 'SfDistantGalaxyOutline',
     fontSize: 24,
-    color: '#4E5B6E',
   },
   divider: { marginBottom: 20 },
 });

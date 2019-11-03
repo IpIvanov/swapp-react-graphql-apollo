@@ -4,11 +4,11 @@ import { MockedProvider } from '@apollo/react-testing';
 import { mount } from 'enzyme';
 import { ThemeProvider } from '@material-ui/core/styles';
 import ThemeContext from '../../contexts/ThemeContext';
-import { CharacterDetails } from '../../screens';
+import { StarshipDetails } from '../../screens';
 
 jest.mock('react-router-dom', () => ({
   useParams: () => ({
-    characterId: 'person.1',
+    starshipId: 'starship.1',
   }),
   useHistory: () => ({
     push: jest.fn(),
@@ -22,27 +22,20 @@ jest.mock('@apollo/react-hooks', () => ({
   useQuery: () => ({
     loading: false,
     data: {
-      person: {
-        height: 172,
-        homeworld: { name: 'Tatooine' },
+      starship: {
+        name: 'test-name',
         image: 'test-image.jpg',
-        name: 'Luke Skywalker',
-        species: { name: 'Human' },
-        starships: {
-          edges: [{
-            node: {
-              id: 'starships.12',
-              image: 'starship-image.jpg',
-              name: 'X-wing',
-            },
-          }],
-        },
+        starshipClass: 'test-class',
+        cost: 10000,
+        crew: 5,
+        maxAtmosphericSpeed: 999,
+        hyperdriveRating: 1,
       },
     },
   }),
 }));
 
-describe('Screens | CharacterDetails', () => {
+describe('Screens | StarshipDetails', () => {
   let theme;
 
   beforeEach(() => {
@@ -54,7 +47,7 @@ describe('Screens | CharacterDetails', () => {
       <ThemeProvider theme={theme.default}>
         <MockedProvider addTypename={false} resolvers={{}}>
           <ThemeContext.Provider value={{ theme: 'dark', setTheme: () => { } }}>
-            <CharacterDetails />
+            <StarshipDetails />
           </ThemeContext.Provider>
         </MockedProvider>
       </ThemeProvider>,

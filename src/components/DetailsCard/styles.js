@@ -1,7 +1,9 @@
-const styles = () => ({
-  card: {
+const styles = (theme) => ({
+  card: (props) => ({
+    borderColor: theme.palette[props.theme].Cards.borderColor,
+    backgroundColor: theme.palette[props.theme].Cards.backgroundColor,
     padding: 20,
-  },
+  }),
   content: {
     padding: 0, paddingTop: 10,
   },
@@ -14,11 +16,13 @@ const styles = () => ({
     width: '100%',
     height: 420,
   },
-  title: {
-    color: '#4BD5EE',
+  title: (props) => ({
+    color: theme.palette[props.theme].PrimaryHeading.fontColor,
     fontWeight: 700,
-  },
-  detailValue: { color: '#4BD5EE' },
+  }),
+  detailValue: (props) => ({
+    color: theme.palette[props.theme].PrimaryHeading.fontColor,
+  }),
 });
 
 export default styles;

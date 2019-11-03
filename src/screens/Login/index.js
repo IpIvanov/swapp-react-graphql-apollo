@@ -11,13 +11,14 @@ import { SIGN_IN } from '../../client/queries';
 import styles from './styles';
 
 const Login = () => {
-  const classes = makeStyles(styles)();
+  const {
+    theme,
+    setTheme,
+  } = useContext(ThemeContext);
+  const classes = makeStyles(styles)({ theme });
   const history = useHistory();
   const client = useApolloClient();
   const [errorMessage, setErrorMessage] = useState(null);
-  const {
-    setTheme,
-  } = useContext(ThemeContext);
 
   const [login, { loading }] = useMutation(SIGN_IN, {
     onCompleted: ({ signIn: { token } }) => {
@@ -90,6 +91,10 @@ const Login = () => {
                     value={values.email}
                     variant="filled"
                     margin="dense"
+                    className={classes.textField}
+                    InputProps={{
+                      className: classes.input,
+                    }}
                   />
                   <TextField
                     name="password"
@@ -98,6 +103,10 @@ const Login = () => {
                     type="password"
                     variant="filled"
                     margin="dense"
+                    className={classes.textField}
+                    InputProps={{
+                      className: classes.input,
+                    }}
                   />
                 </FormGroup>
               </Grid>

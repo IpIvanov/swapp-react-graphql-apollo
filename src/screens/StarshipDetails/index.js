@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Grid, Typography, Divider, CircularProgress } from '@material-ui/core';
 import { useQuery } from '@apollo/react-hooks';
 import { Header, DetailsCard } from '../../components';
 import { GET_STARSHIP_DETAILS } from '../../client/queries';
+import ThemeContext from '../../contexts/ThemeContext';
 import styles from './styles';
 
 const StarshipDetails = () => {
-  const classes = makeStyles(styles)();
+  const {
+    theme,
+  } = useContext(ThemeContext);
+  const classes = makeStyles(styles)({ theme });
   const { starshipId } = useParams();
 
   const { loading, data } = useQuery(GET_STARSHIP_DETAILS, {
@@ -50,7 +54,7 @@ const StarshipDetails = () => {
                 },
                 {
                   key: 'Cost',
-                  value: cost,
+                  value: cost || 0,
                 },
                 {
                   key: 'Crew',

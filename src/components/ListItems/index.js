@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { makeStyles, Link, Typography, Card, Grid, Box, Button, CardMedia, CardContent } from '@material-ui/core';
 import styles from './styles';
+import ThemeContext from '../../contexts/ThemeContext';
 
 const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkToUrl, mdColumns }) => {
+  const {
+    theme,
+  } = useContext(ThemeContext);
   const useStyles = makeStyles(styles);
-  const classes = useStyles();
+  const classes = useStyles({ theme });
   const history = useHistory();
   const linkTo = (e, route) => {
     e.preventDefault();
