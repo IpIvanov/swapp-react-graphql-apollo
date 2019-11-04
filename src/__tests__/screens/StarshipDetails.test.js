@@ -32,6 +32,15 @@ jest.mock('@apollo/react-hooks', () => ({
             maxMLPerHour: 75,
             starshipClass: 'test-class',
           },
+        }, {
+          node: {
+            cost: 100000,
+            crew: 4,
+            hyperdriveRating: 3.5,
+            maxAtmosphericSpeed: 1050,
+            maxMLPerHour: 75,
+            starshipClass: 'test-class',
+          },
         }],
       },
       starship: {
