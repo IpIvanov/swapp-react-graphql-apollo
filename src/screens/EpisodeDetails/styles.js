@@ -5,11 +5,14 @@ const styles = (theme) => ({
   container: {
     marginTop: 50,
   },
-  card: {
+  card: (props) => ({
     display: 'flex',
     flexDirection: 'row',
     marginBottom: 20,
-  },
+    borderColor: theme.palette[props.theme].Cards.borderColor,
+    backgroundColor: theme.palette[props.theme].Cards.backgroundColor,
+    color: theme.palette[props.theme].textColor,
+  }),
   content: {
     display: 'flex',
     alignItems: 'center',
@@ -22,7 +25,7 @@ const styles = (theme) => ({
   },
   movieCover: {
     width: 300,
-    height: 300,
+    height: 290,
   },
   name: (props) => ({
     color: theme.palette[props.theme].PrimaryHeading.fontColor,

@@ -25,7 +25,6 @@ const DetailsCard = ({ title, image, details }) => {
         {details.map((detail) => (
           <Typography
             variant="body2"
-            color="textSecondary"
             component="p"
             className={classes.description}
             align="left"

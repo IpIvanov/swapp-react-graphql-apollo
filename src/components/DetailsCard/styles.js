@@ -7,11 +7,12 @@ const styles = (theme) => ({
   content: {
     padding: 0, paddingTop: 10,
   },
-  description: {
+  description: (props) => ({
     textAlign: 'left',
     marginBottom: 10,
     padding: 0,
-  },
+    color: theme.palette[props.theme].textColor,
+  }),
   cover: {
     width: '100%',
     height: 420,

@@ -748,10 +748,10 @@ exports[`Screens | Characters renders without crashing not loading state 1`] = `
                                     onFocus={[Function]}
                                   >
                                     <WithStyles(ForwardRef(Card))
-                                      className="makeStyles-card-64"
+                                      className="makeStyles-card-64 makeStyles-card-70"
                                     >
                                       <ForwardRef(Card)
-                                        className="makeStyles-card-64"
+                                        className="makeStyles-card-64 makeStyles-card-70"
                                         classes={
                                           Object {
                                             "root": "MuiCard-root",
@@ -759,11 +759,11 @@ exports[`Screens | Characters renders without crashing not loading state 1`] = `
                                         }
                                       >
                                         <WithStyles(ForwardRef(Paper))
-                                          className="MuiCard-root makeStyles-card-64"
+                                          className="MuiCard-root makeStyles-card-64 makeStyles-card-70"
                                           elevation={1}
                                         >
                                           <ForwardRef(Paper)
-                                            className="MuiCard-root makeStyles-card-64"
+                                            className="MuiCard-root makeStyles-card-64 makeStyles-card-70"
                                             classes={
                                               Object {
                                                 "elevation0": "MuiPaper-elevation0",
@@ -798,7 +798,7 @@ exports[`Screens | Characters renders without crashing not loading state 1`] = `
                                             elevation={1}
                                           >
                                             <div
-                                              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-64 MuiPaper-rounded"
+                                              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-64 makeStyles-card-70 MuiPaper-rounded"
                                             >
                                               <WithStyles(ForwardRef(CardMedia))
                                                 className="makeStyles-cover-66"
@@ -845,12 +845,12 @@ exports[`Screens | Characters renders without crashing not loading state 1`] = `
                                                     className="MuiCardContent-root makeStyles-content-65"
                                                   >
                                                     <WithStyles(ForwardRef(Typography))
-                                                      className="makeStyles-name-67 makeStyles-name-70"
+                                                      className="makeStyles-name-67 makeStyles-name-71"
                                                       component="h5"
                                                       variant="h5"
                                                     >
                                                       <ForwardRef(Typography)
-                                                        className="makeStyles-name-67 makeStyles-name-70"
+                                                        className="makeStyles-name-67 makeStyles-name-71"
                                                         classes={
                                                           Object {
                                                             "alignCenter": "MuiTypography-alignCenter",
@@ -889,7 +889,7 @@ exports[`Screens | Characters renders without crashing not loading state 1`] = `
                                                         variant="h5"
                                                       >
                                                         <h5
-                                                          className="MuiTypography-root makeStyles-name-67 makeStyles-name-70 MuiTypography-h5"
+                                                          className="MuiTypography-root makeStyles-name-67 makeStyles-name-71 MuiTypography-h5"
                                                         >
                                                           test-name
                                                         </h5>

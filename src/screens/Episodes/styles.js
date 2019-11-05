@@ -12,14 +12,17 @@ const styles = (theme) => ({
     textTransform: 'none',
     fontSize: 22,
   }),
-  description: {
+  description: (props) => ({
     overFlow: 'hidden',
     textAlign: 'left',
-  },
-  card: {
+    color: theme.palette[props.theme].textColor,
+  }),
+  card: (props) => ({
     maxHeight: 400,
     marginBottom: 20,
-  },
+    borderColor: theme.palette[props.theme].Cards.borderColor,
+    backgroundColor: theme.palette[props.theme].Cards.backgroundColor,
+  }),
   media: {
     height: 180,
   },

@@ -1,17 +1,22 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { RadarChart, CircularGridLines } from 'react-vis';
+import ThemeContext from '../../contexts/ThemeContext';
+import mainTheme from '../../theme';
 
 const StarshipRadarChart = (
   { starshipData: { starshipClass, maxAtmosphericSpeed, cost, crew, hyperdriveRating, maxMLPerHour },
     allStarshipsData },
 ) => {
+  const {
+    theme,
+  } = useContext(ThemeContext);
   const data = allStarshipsData.filter((starship) => starship.node.starshipClass === starshipClass)
     .map((
       { node: { cost: Cost, crew: Crew, hyperdriveRating: hdRating, maxMLPerHour: maxMlPHour, maxAtmosphericSpeed: maSpeed } },
     ) => ({ Cost, Crew, 'HyperD Rat.': hdRating, 'Max ML/h': maxMlPHour, 'Max Atm. Speed': maSpeed }));
-  let DOMAIN = [
+  const DOMAIN = [
     { name: 'Max Atm. Speed', domain: [0, Math.max(...data.map((o) => o['Max Atm. Speed']), 0)], tickFormat: (t) => t },
     { name: 'Cost', domain: [0, Math.max(...data.map((o) => o.Cost), 0)] },
     { name: 'Crew', domain: [0, Math.max(...data.map((o) => o.Crew), 0)] },
@@ -44,14 +49,6 @@ const StarshipRadarChart = (
     dataObject(),
   ];
 
-  DOMAIN = DOMAIN.map((item) => Object.keys(DATA[0]).map((title) => {
-    if (title === item.name) {
-      return item;
-    }
-
-    return undefined;
-  })).flat().filter((item) => item !== undefined);
-
   return (
     <RadarChart
       animation
@@ -75,7 +72,7 @@ const StarshipRadarChart = (
           textAnchor: 'middle',
           fontSize: 12,
           fontWeight: 600,
-          fill: '#fff',
+          fill: mainTheme.palette[theme].PrimaryHeading.fontColor,
         },
       }}
       margin={{
