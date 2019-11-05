@@ -996,6 +996,7 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                           <span
                                             className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
+                                            9999
                                              
                                           </span>
                                         </p>
@@ -2152,7 +2153,7 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                         </g>
                         <path
                           className="rv-xy-plot__series rv-xy-plot__series--polygon rv-radar-chart-polygon"
-                          d=" MNaN NaN L135.7341522555727 155.05572809000085 L39.79026519516126 321.80339887498945 L150.87729142133205 161.2879872547263 L207.06339097770922 140.2229123600034 Z"
+                          d=" M150.0000000000001 -1363.6571428571428 L135.7341522555727 155.05572809000085 L39.79026519516126 321.80339887498945 L150.87729142133205 161.2879872547263 L207.06339097770922 140.2229123600034 Z"
                           fill="#12939A"
                           onClick={[Function]}
                           onContextMenu={[Function]}
