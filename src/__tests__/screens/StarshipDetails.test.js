@@ -52,6 +52,7 @@ jest.mock('@apollo/react-hooks', () => ({
         crew: 5,
         hyperdriveRating: 1,
         maxMLPerHour: 30,
+        maxAtmosphericSpeed: 9999,
       },
     },
   }),
