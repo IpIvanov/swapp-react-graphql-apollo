@@ -22,14 +22,37 @@ jest.mock('@apollo/react-hooks', () => ({
   useQuery: () => ({
     loading: false,
     data: {
+      allStarships: {
+        edges: [{
+          node: {
+            starshipClass: 'light freighter',
+            maxAtmosphericSpeed: 1050,
+            maxMLPerHour: 75,
+            cost: 100000,
+            crew: 4,
+            hyperdriveRating: 0.5,
+          },
+        },
+        {
+          node: {
+            starshipClass: 'assault starfighter',
+            maxAtmosphericSpeed: 1000,
+            maxMLPerHour: 80,
+            cost: 134999,
+            crew: 2,
+            hyperdriveRating: 1,
+          },
+        }],
+      },
       starship: {
         name: 'test-name',
         image: 'test-image.jpg',
-        starshipClass: 'test-class',
+        starshipClass: 'light freighter',
         cost: 10000,
         crew: 5,
-        maxAtmosphericSpeed: 999,
         hyperdriveRating: 1,
+        maxMLPerHour: 30,
+        maxAtmosphericSpeed: 9999,
       },
     },
   }),

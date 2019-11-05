@@ -667,13 +667,13 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                               className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-177 makeStyles-card-183 MuiPaper-rounded"
                             >
                               <WithStyles(ForwardRef(Typography))
-                                className="makeStyles-title-181 makeStyles-title-184"
+                                className="makeStyles-title-181 makeStyles-title-185"
                                 component="h2"
                                 gutterBottom={true}
                                 variant="h5"
                               >
                                 <ForwardRef(Typography)
-                                  className="makeStyles-title-181 makeStyles-title-184"
+                                  className="makeStyles-title-181 makeStyles-title-185"
                                   classes={
                                     Object {
                                       "alignCenter": "MuiTypography-alignCenter",
@@ -713,7 +713,7 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                   variant="h5"
                                 >
                                   <h2
-                                    className="MuiTypography-root makeStyles-title-181 makeStyles-title-184 MuiTypography-h5 MuiTypography-gutterBottom"
+                                    className="MuiTypography-root makeStyles-title-181 makeStyles-title-185 MuiTypography-h5 MuiTypography-gutterBottom"
                                   >
                                     Luke Skywalker
                                   </h2>
@@ -763,15 +763,14 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                   >
                                     <WithStyles(ForwardRef(Typography))
                                       align="left"
-                                      className="makeStyles-description-179"
-                                      color="textSecondary"
+                                      className="makeStyles-description-179 makeStyles-description-184"
                                       component="p"
                                       key="Height"
                                       variant="body2"
                                     >
                                       <ForwardRef(Typography)
                                         align="left"
-                                        className="makeStyles-description-179"
+                                        className="makeStyles-description-179 makeStyles-description-184"
                                         classes={
                                           Object {
                                             "alignCenter": "MuiTypography-alignCenter",
@@ -806,16 +805,15 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                             "subtitle2": "MuiTypography-subtitle2",
                                           }
                                         }
-                                        color="textSecondary"
                                         component="p"
                                         variant="body2"
                                       >
                                         <p
-                                          className="MuiTypography-root makeStyles-description-179 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+                                          className="MuiTypography-root makeStyles-description-179 makeStyles-description-184 MuiTypography-body2 MuiTypography-alignLeft"
                                         >
                                           Height: 
                                           <span
-                                            className="makeStyles-detailValue-182 makeStyles-detailValue-185"
+                                            className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
                                             172
                                              
@@ -825,15 +823,14 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                     </WithStyles(ForwardRef(Typography))>
                                     <WithStyles(ForwardRef(Typography))
                                       align="left"
-                                      className="makeStyles-description-179"
-                                      color="textSecondary"
+                                      className="makeStyles-description-179 makeStyles-description-184"
                                       component="p"
                                       key="Weight"
                                       variant="body2"
                                     >
                                       <ForwardRef(Typography)
                                         align="left"
-                                        className="makeStyles-description-179"
+                                        className="makeStyles-description-179 makeStyles-description-184"
                                         classes={
                                           Object {
                                             "alignCenter": "MuiTypography-alignCenter",
@@ -868,16 +865,15 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                             "subtitle2": "MuiTypography-subtitle2",
                                           }
                                         }
-                                        color="textSecondary"
                                         component="p"
                                         variant="body2"
                                       >
                                         <p
-                                          className="MuiTypography-root makeStyles-description-179 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+                                          className="MuiTypography-root makeStyles-description-179 makeStyles-description-184 MuiTypography-body2 MuiTypography-alignLeft"
                                         >
                                           Weight: 
                                           <span
-                                            className="makeStyles-detailValue-182 makeStyles-detailValue-185"
+                                            className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
                                              
                                           </span>
@@ -886,15 +882,14 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                     </WithStyles(ForwardRef(Typography))>
                                     <WithStyles(ForwardRef(Typography))
                                       align="left"
-                                      className="makeStyles-description-179"
-                                      color="textSecondary"
+                                      className="makeStyles-description-179 makeStyles-description-184"
                                       component="p"
                                       key="Species"
                                       variant="body2"
                                     >
                                       <ForwardRef(Typography)
                                         align="left"
-                                        className="makeStyles-description-179"
+                                        className="makeStyles-description-179 makeStyles-description-184"
                                         classes={
                                           Object {
                                             "alignCenter": "MuiTypography-alignCenter",
@@ -929,16 +924,15 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                             "subtitle2": "MuiTypography-subtitle2",
                                           }
                                         }
-                                        color="textSecondary"
                                         component="p"
                                         variant="body2"
                                       >
                                         <p
-                                          className="MuiTypography-root makeStyles-description-179 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+                                          className="MuiTypography-root makeStyles-description-179 makeStyles-description-184 MuiTypography-body2 MuiTypography-alignLeft"
                                         >
                                           Species: 
                                           <span
-                                            className="makeStyles-detailValue-182 makeStyles-detailValue-185"
+                                            className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
                                             Human
                                              
@@ -948,15 +942,14 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                     </WithStyles(ForwardRef(Typography))>
                                     <WithStyles(ForwardRef(Typography))
                                       align="left"
-                                      className="makeStyles-description-179"
-                                      color="textSecondary"
+                                      className="makeStyles-description-179 makeStyles-description-184"
                                       component="p"
                                       key="Home World"
                                       variant="body2"
                                     >
                                       <ForwardRef(Typography)
                                         align="left"
-                                        className="makeStyles-description-179"
+                                        className="makeStyles-description-179 makeStyles-description-184"
                                         classes={
                                           Object {
                                             "alignCenter": "MuiTypography-alignCenter",
@@ -991,16 +984,15 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                             "subtitle2": "MuiTypography-subtitle2",
                                           }
                                         }
-                                        color="textSecondary"
                                         component="p"
                                         variant="body2"
                                       >
                                         <p
-                                          className="MuiTypography-root makeStyles-description-179 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+                                          className="MuiTypography-root makeStyles-description-179 makeStyles-description-184 MuiTypography-body2 MuiTypography-alignLeft"
                                         >
                                           Home World: 
                                           <span
-                                            className="makeStyles-detailValue-182 makeStyles-detailValue-185"
+                                            className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
                                             Tatooine
                                              
@@ -1572,13 +1564,13 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12"
                                     >
                                       <WithStyles(ForwardRef(Link))
-                                        className="makeStyles-linkTo-223"
+                                        className="makeStyles-linkTo-224"
                                         href="/"
                                         onClick={[Function]}
                                         underline="none"
                                       >
                                         <ForwardRef(Link)
-                                          className="makeStyles-linkTo-223"
+                                          className="makeStyles-linkTo-224"
                                           classes={
                                             Object {
                                               "button": "MuiLink-button",
@@ -1594,7 +1586,7 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                           underline="none"
                                         >
                                           <WithStyles(ForwardRef(Typography))
-                                            className="MuiLink-root MuiLink-underlineNone makeStyles-linkTo-223"
+                                            className="MuiLink-root MuiLink-underlineNone makeStyles-linkTo-224"
                                             color="primary"
                                             component="a"
                                             href="/"
@@ -1604,7 +1596,7 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                             variant="inherit"
                                           >
                                             <ForwardRef(Typography)
-                                              className="MuiLink-root MuiLink-underlineNone makeStyles-linkTo-223"
+                                              className="MuiLink-root MuiLink-underlineNone makeStyles-linkTo-224"
                                               classes={
                                                 Object {
                                                   "alignCenter": "MuiTypography-alignCenter",
@@ -1648,17 +1640,17 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                               variant="inherit"
                                             >
                                               <a
-                                                className="MuiTypography-root MuiLink-root MuiLink-underlineNone makeStyles-linkTo-223 MuiTypography-colorPrimary"
+                                                className="MuiTypography-root MuiLink-root MuiLink-underlineNone makeStyles-linkTo-224 MuiTypography-colorPrimary"
                                                 href="/"
                                                 onBlur={[Function]}
                                                 onClick={[Function]}
                                                 onFocus={[Function]}
                                               >
                                                 <WithStyles(ForwardRef(Card))
-                                                  className="makeStyles-card-218"
+                                                  className="makeStyles-card-219 makeStyles-card-225"
                                                 >
                                                   <ForwardRef(Card)
-                                                    className="makeStyles-card-218"
+                                                    className="makeStyles-card-219 makeStyles-card-225"
                                                     classes={
                                                       Object {
                                                         "root": "MuiCard-root",
@@ -1666,11 +1658,11 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                                     }
                                                   >
                                                     <WithStyles(ForwardRef(Paper))
-                                                      className="MuiCard-root makeStyles-card-218"
+                                                      className="MuiCard-root makeStyles-card-219 makeStyles-card-225"
                                                       elevation={1}
                                                     >
                                                       <ForwardRef(Paper)
-                                                        className="MuiCard-root makeStyles-card-218"
+                                                        className="MuiCard-root makeStyles-card-219 makeStyles-card-225"
                                                         classes={
                                                           Object {
                                                             "elevation0": "MuiPaper-elevation0",
@@ -1705,16 +1697,16 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                                         elevation={1}
                                                       >
                                                         <div
-                                                          className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-218 MuiPaper-rounded"
+                                                          className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-219 makeStyles-card-225 MuiPaper-rounded"
                                                         >
                                                           <WithStyles(ForwardRef(CardMedia))
-                                                            className="makeStyles-cover-220"
+                                                            className="makeStyles-cover-221"
                                                             image="starship-image.jpg"
                                                             src="X-wing"
                                                             title="X-wing"
                                                           >
                                                             <ForwardRef(CardMedia)
-                                                              className="makeStyles-cover-220"
+                                                              className="makeStyles-cover-221"
                                                               classes={
                                                                 Object {
                                                                   "img": "MuiCardMedia-img",
@@ -1727,7 +1719,7 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                                               title="X-wing"
                                                             >
                                                               <div
-                                                                className="MuiCardMedia-root makeStyles-cover-220"
+                                                                className="MuiCardMedia-root makeStyles-cover-221"
                                                                 style={
                                                                   Object {
                                                                     "backgroundImage": "url(\\"starship-image.jpg\\")",
@@ -1738,10 +1730,10 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                                             </ForwardRef(CardMedia)>
                                                           </WithStyles(ForwardRef(CardMedia))>
                                                           <WithStyles(ForwardRef(CardContent))
-                                                            className="makeStyles-content-219"
+                                                            className="makeStyles-content-220"
                                                           >
                                                             <ForwardRef(CardContent)
-                                                              className="makeStyles-content-219"
+                                                              className="makeStyles-content-220"
                                                               classes={
                                                                 Object {
                                                                   "root": "MuiCardContent-root",
@@ -1749,15 +1741,15 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                                               }
                                                             >
                                                               <div
-                                                                className="MuiCardContent-root makeStyles-content-219"
+                                                                className="MuiCardContent-root makeStyles-content-220"
                                                               >
                                                                 <WithStyles(ForwardRef(Typography))
-                                                                  className="makeStyles-name-221 makeStyles-name-224"
+                                                                  className="makeStyles-name-222 makeStyles-name-226"
                                                                   component="h5"
                                                                   variant="h5"
                                                                 >
                                                                   <ForwardRef(Typography)
-                                                                    className="makeStyles-name-221 makeStyles-name-224"
+                                                                    className="makeStyles-name-222 makeStyles-name-226"
                                                                     classes={
                                                                       Object {
                                                                         "alignCenter": "MuiTypography-alignCenter",
@@ -1796,7 +1788,7 @@ exports[`Screens | CharacterDetails renders without crashing not loading state 1
                                                                     variant="h5"
                                                                   >
                                                                     <h5
-                                                                      className="MuiTypography-root makeStyles-name-221 makeStyles-name-224 MuiTypography-h5"
+                                                                      className="MuiTypography-root makeStyles-name-222 makeStyles-name-226 MuiTypography-h5"
                                                                     >
                                                                       X-wing
                                                                     </h5>

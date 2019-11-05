@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Grid, Typography, Divider, CircularProgress } from '@material-ui/core';
 import { useQuery } from '@apollo/react-hooks';
-import { Header, DetailsCard } from '../../components';
-import { GET_STARSHIP_DETAILS } from '../../client/queries';
+import { Header, DetailsCard, StarshipRadarChart } from '../../components';
+import { GET_STARSHIP_DETAILS, GET_ALL_STARSHIPS } from '../../client/queries';
 import ThemeContext from '../../contexts/ThemeContext';
 import styles from './styles';
 
@@ -15,11 +15,15 @@ const StarshipDetails = () => {
   const classes = makeStyles(styles)({ theme });
   const { starshipId } = useParams();
 
-  const { loading, data } = useQuery(GET_STARSHIP_DETAILS, {
+  const { loading, data: starshipData } = useQuery(GET_STARSHIP_DETAILS, {
     variables: { id: starshipId },
   });
 
-  if (loading) {
+  const { loading: loadingAll, data: allStarships } = useQuery(GET_ALL_STARSHIPS, {
+    variables: { first: 37 },
+  });
+
+  if (loading || loadingAll) {
     return (<CircularProgress />);
   }
 
@@ -31,8 +35,9 @@ const StarshipDetails = () => {
     crew,
     maxAtmosphericSpeed,
     hyperdriveRating,
-  } } = data;
-
+  } } = starshipData;
+  const { starship: starshipGraphData } = starshipData;
+  const { allStarships: { edges: allStarshipsData } } = allStarships;
 
   return (
     <div className={classes.wrapper}>
@@ -76,7 +81,10 @@ const StarshipDetails = () => {
               Compared to Starship Class Max
             </Typography>
             <Divider className={classes.divider} />
-            <Typography>Graph here</Typography>
+            <StarshipRadarChart
+              starshipData={starshipGraphData}
+              allStarshipsData={allStarshipsData}
+            />
           </Grid>
         </Grid>
       </Container>

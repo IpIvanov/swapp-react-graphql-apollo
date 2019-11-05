@@ -1,9 +1,10 @@
 const styles = (theme) => ({
-  card: {
+  card: (props) => ({
     display: 'flex',
     flexDirection: 'row',
     marginBottom: 20,
-  },
+    backgroundColor: theme.palette[props.theme].Cards.backgroundColor,
+  }),
   content: {
     display: 'flex',
     alignItems: 'center',

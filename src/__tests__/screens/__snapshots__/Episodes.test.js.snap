@@ -5,14 +5,14 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
   className="makeStyles-wrapper-1"
 >
   <div
-    className="makeStyles-container-9 makeStyles-container-15"
+    className="makeStyles-container-11 makeStyles-container-17"
   >
     <WithStyles(ForwardRef(Typography))
-      className="makeStyles-linkHome-12"
+      className="makeStyles-linkHome-14"
       onClick={[Function]}
     >
       <ForwardRef(Typography)
-        className="makeStyles-linkHome-12"
+        className="makeStyles-linkHome-14"
         classes={
           Object {
             "alignCenter": "MuiTypography-alignCenter",
@@ -50,7 +50,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
         onClick={[Function]}
       >
         <p
-          className="MuiTypography-root makeStyles-linkHome-12 MuiTypography-body1"
+          className="MuiTypography-root makeStyles-linkHome-14 MuiTypography-body1"
           onClick={[Function]}
         >
           SWAPP
@@ -58,16 +58,16 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
       </ForwardRef(Typography)>
     </WithStyles(ForwardRef(Typography))>
     <div
-      className="makeStyles-rightHeader-10"
+      className="makeStyles-rightHeader-12"
     >
       <WithStyles(ForwardRef(Link))
-        className="makeStyles-link-11 makeStyles-link-16"
+        className="makeStyles-link-13 makeStyles-link-18"
         href="/"
         onClick={[Function]}
         underline="none"
       >
         <ForwardRef(Link)
-          className="makeStyles-link-11 makeStyles-link-16"
+          className="makeStyles-link-13 makeStyles-link-18"
           classes={
             Object {
               "button": "MuiLink-button",
@@ -83,7 +83,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
           underline="none"
         >
           <WithStyles(ForwardRef(Typography))
-            className="MuiLink-root MuiLink-underlineNone makeStyles-link-11 makeStyles-link-16"
+            className="MuiLink-root MuiLink-underlineNone makeStyles-link-13 makeStyles-link-18"
             color="primary"
             component="a"
             href="/"
@@ -93,7 +93,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
             variant="inherit"
           >
             <ForwardRef(Typography)
-              className="MuiLink-root MuiLink-underlineNone makeStyles-link-11 makeStyles-link-16"
+              className="MuiLink-root MuiLink-underlineNone makeStyles-link-13 makeStyles-link-18"
               classes={
                 Object {
                   "alignCenter": "MuiTypography-alignCenter",
@@ -137,7 +137,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
               variant="inherit"
             >
               <a
-                className="MuiTypography-root MuiLink-root MuiLink-underlineNone makeStyles-link-11 makeStyles-link-16 MuiTypography-colorPrimary"
+                className="MuiTypography-root MuiLink-root MuiLink-underlineNone makeStyles-link-13 makeStyles-link-18 MuiTypography-colorPrimary"
                 href="/"
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -150,13 +150,13 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
         </ForwardRef(Link)>
       </WithStyles(ForwardRef(Link))>
       <WithStyles(ForwardRef(Link))
-        className="makeStyles-link-11 makeStyles-link-16"
+        className="makeStyles-link-13 makeStyles-link-18"
         href="/"
         onClick={[Function]}
         underline="none"
       >
         <ForwardRef(Link)
-          className="makeStyles-link-11 makeStyles-link-16"
+          className="makeStyles-link-13 makeStyles-link-18"
           classes={
             Object {
               "button": "MuiLink-button",
@@ -172,7 +172,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
           underline="none"
         >
           <WithStyles(ForwardRef(Typography))
-            className="MuiLink-root MuiLink-underlineNone makeStyles-link-11 makeStyles-link-16"
+            className="MuiLink-root MuiLink-underlineNone makeStyles-link-13 makeStyles-link-18"
             color="primary"
             component="a"
             href="/"
@@ -182,7 +182,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
             variant="inherit"
           >
             <ForwardRef(Typography)
-              className="MuiLink-root MuiLink-underlineNone makeStyles-link-11 makeStyles-link-16"
+              className="MuiLink-root MuiLink-underlineNone makeStyles-link-13 makeStyles-link-18"
               classes={
                 Object {
                   "alignCenter": "MuiTypography-alignCenter",
@@ -226,7 +226,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
               variant="inherit"
             >
               <a
-                className="MuiTypography-root MuiLink-root MuiLink-underlineNone makeStyles-link-11 makeStyles-link-16 MuiTypography-colorPrimary"
+                className="MuiTypography-root MuiLink-root MuiLink-underlineNone makeStyles-link-13 makeStyles-link-18 MuiTypography-colorPrimary"
                 href="/"
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -239,7 +239,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
         </ForwardRef(Link)>
       </WithStyles(ForwardRef(Link))>
       <div
-        className="makeStyles-exit-13 makeStyles-exit-17"
+        className="makeStyles-exit-15 makeStyles-exit-19"
       >
         <ForwardRef
           onClick={[Function]}
@@ -749,10 +749,10 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
                                     onFocus={[Function]}
                                   >
                                     <WithStyles(ForwardRef(Card))
-                                      className="makeStyles-card-5"
+                                      className="makeStyles-card-5 makeStyles-card-10"
                                     >
                                       <ForwardRef(Card)
-                                        className="makeStyles-card-5"
+                                        className="makeStyles-card-5 makeStyles-card-10"
                                         classes={
                                           Object {
                                             "root": "MuiCard-root",
@@ -760,11 +760,11 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
                                         }
                                       >
                                         <WithStyles(ForwardRef(Paper))
-                                          className="MuiCard-root makeStyles-card-5"
+                                          className="MuiCard-root makeStyles-card-5 makeStyles-card-10"
                                           elevation={1}
                                         >
                                           <ForwardRef(Paper)
-                                            className="MuiCard-root makeStyles-card-5"
+                                            className="MuiCard-root makeStyles-card-5 makeStyles-card-10"
                                             classes={
                                               Object {
                                                 "elevation0": "MuiPaper-elevation0",
@@ -799,7 +799,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
                                             elevation={1}
                                           >
                                             <div
-                                              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-5 MuiPaper-rounded"
+                                              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-5 makeStyles-card-10 MuiPaper-rounded"
                                             >
                                               <WithStyles(ForwardRef(CardMedia))
                                                 className="makeStyles-media-6"
@@ -894,13 +894,13 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
                                                       </ForwardRef(Typography)>
                                                     </WithStyles(ForwardRef(Typography))>
                                                     <WithStyles(ForwardRef(Typography))
-                                                      className="makeStyles-description-4"
+                                                      className="makeStyles-description-4 makeStyles-description-9"
                                                       color="textSecondary"
                                                       component="p"
                                                       variant="body2"
                                                     >
                                                       <ForwardRef(Typography)
-                                                        className="makeStyles-description-4"
+                                                        className="makeStyles-description-4 makeStyles-description-9"
                                                         classes={
                                                           Object {
                                                             "alignCenter": "MuiTypography-alignCenter",
@@ -940,7 +940,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
                                                         variant="body2"
                                                       >
                                                         <p
-                                                          className="MuiTypography-root makeStyles-description-4 MuiTypography-body2 MuiTypography-colorTextSecondary"
+                                                          className="MuiTypography-root makeStyles-description-4 makeStyles-description-9 MuiTypography-body2 MuiTypography-colorTextSecondary"
                                                         >
                                                           test-openingCrawl
                                                         </p>

@@ -6,6 +6,7 @@ import client from './client';
 import './fonts/fonts.css';
 import AppRouter from './router';
 import theme from './theme';
+import './index.scss';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>

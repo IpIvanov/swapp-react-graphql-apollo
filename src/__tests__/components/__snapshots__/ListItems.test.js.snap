@@ -445,10 +445,10 @@ exports[`Components | ListItems renders without crashing 1`] = `
                             onFocus={[Function]}
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="makeStyles-card-1"
+                              className="makeStyles-card-1 makeStyles-card-7"
                             >
                               <ForwardRef(Card)
-                                className="makeStyles-card-1"
+                                className="makeStyles-card-1 makeStyles-card-7"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
@@ -456,11 +456,11 @@ exports[`Components | ListItems renders without crashing 1`] = `
                                 }
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root makeStyles-card-1"
+                                  className="MuiCard-root makeStyles-card-1 makeStyles-card-7"
                                   elevation={1}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root makeStyles-card-1"
+                                    className="MuiCard-root makeStyles-card-1 makeStyles-card-7"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -495,7 +495,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
                                     elevation={1}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-1 makeStyles-card-7 MuiPaper-rounded"
                                     >
                                       <WithStyles(ForwardRef(CardMedia))
                                         className="makeStyles-cover-3"
@@ -542,12 +542,12 @@ exports[`Components | ListItems renders without crashing 1`] = `
                                             className="MuiCardContent-root makeStyles-content-2"
                                           >
                                             <WithStyles(ForwardRef(Typography))
-                                              className="makeStyles-name-4 makeStyles-name-7"
+                                              className="makeStyles-name-4 makeStyles-name-8"
                                               component="h5"
                                               variant="h5"
                                             >
                                               <ForwardRef(Typography)
-                                                className="makeStyles-name-4 makeStyles-name-7"
+                                                className="makeStyles-name-4 makeStyles-name-8"
                                                 classes={
                                                   Object {
                                                     "alignCenter": "MuiTypography-alignCenter",
@@ -586,7 +586,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
                                                 variant="h5"
                                               >
                                                 <h5
-                                                  className="MuiTypography-root makeStyles-name-4 makeStyles-name-7 MuiTypography-h5"
+                                                  className="MuiTypography-root makeStyles-name-4 makeStyles-name-8 MuiTypography-h5"
                                                 >
                                                   Luke Skywalker
                                                 </h5>
@@ -813,10 +813,10 @@ exports[`Components | ListItems renders without crashing 1`] = `
                             onFocus={[Function]}
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="makeStyles-card-1"
+                              className="makeStyles-card-1 makeStyles-card-7"
                             >
                               <ForwardRef(Card)
-                                className="makeStyles-card-1"
+                                className="makeStyles-card-1 makeStyles-card-7"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
@@ -824,11 +824,11 @@ exports[`Components | ListItems renders without crashing 1`] = `
                                 }
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root makeStyles-card-1"
+                                  className="MuiCard-root makeStyles-card-1 makeStyles-card-7"
                                   elevation={1}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root makeStyles-card-1"
+                                    className="MuiCard-root makeStyles-card-1 makeStyles-card-7"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -863,7 +863,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
                                     elevation={1}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-1 makeStyles-card-7 MuiPaper-rounded"
                                     >
                                       <WithStyles(ForwardRef(CardMedia))
                                         className="makeStyles-cover-3"
@@ -910,12 +910,12 @@ exports[`Components | ListItems renders without crashing 1`] = `
                                             className="MuiCardContent-root makeStyles-content-2"
                                           >
                                             <WithStyles(ForwardRef(Typography))
-                                              className="makeStyles-name-4 makeStyles-name-7"
+                                              className="makeStyles-name-4 makeStyles-name-8"
                                               component="h5"
                                               variant="h5"
                                             >
                                               <ForwardRef(Typography)
-                                                className="makeStyles-name-4 makeStyles-name-7"
+                                                className="makeStyles-name-4 makeStyles-name-8"
                                                 classes={
                                                   Object {
                                                     "alignCenter": "MuiTypography-alignCenter",
@@ -954,7 +954,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
                                                 variant="h5"
                                               >
                                                 <h5
-                                                  className="MuiTypography-root makeStyles-name-4 makeStyles-name-7 MuiTypography-h5"
+                                                  className="MuiTypography-root makeStyles-name-4 makeStyles-name-8 MuiTypography-h5"
                                                 >
                                                   Luke Skywalker
                                                 </h5>
@@ -986,17 +986,17 @@ exports[`Components | ListItems renders without crashing 1`] = `
         justifyContent="center"
       >
         <div
-          className="MuiBox-root MuiBox-root-181"
+          className="MuiBox-root MuiBox-root-182"
         >
           <WithStyles(ForwardRef(Button))
-            className="makeStyles-button-5 makeStyles-button-8"
+            className="makeStyles-button-5 makeStyles-button-9"
             color="primary"
             onClick={[Function]}
             size="small"
             variant="outlined"
           >
             <ForwardRef(Button)
-              className="makeStyles-button-5 makeStyles-button-8"
+              className="makeStyles-button-5 makeStyles-button-9"
               classes={
                 Object {
                   "colorInherit": "MuiButton-colorInherit",
@@ -1035,7 +1035,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
               variant="outlined"
             >
               <WithStyles(ForwardRef(ButtonBase))
-                className="MuiButton-root MuiButton-outlined makeStyles-button-5 makeStyles-button-8 MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall"
+                className="MuiButton-root MuiButton-outlined makeStyles-button-5 makeStyles-button-9 MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall"
                 component="button"
                 disabled={false}
                 focusRipple={true}
@@ -1044,7 +1044,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
                 type="button"
               >
                 <ForwardRef(ButtonBase)
-                  className="MuiButton-root MuiButton-outlined makeStyles-button-5 makeStyles-button-8 MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall"
+                  className="MuiButton-root MuiButton-outlined makeStyles-button-5 makeStyles-button-9 MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall"
                   classes={
                     Object {
                       "disabled": "Mui-disabled",
@@ -1060,7 +1060,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
                   type="button"
                 >
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-5 makeStyles-button-8 MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall"
+                    className="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-5 makeStyles-button-9 MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall"
                     disabled={false}
                     onBlur={[Function]}
                     onClick={[Function]}

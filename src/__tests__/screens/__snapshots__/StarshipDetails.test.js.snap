@@ -667,13 +667,13 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                               className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-177 makeStyles-card-183 MuiPaper-rounded"
                             >
                               <WithStyles(ForwardRef(Typography))
-                                className="makeStyles-title-181 makeStyles-title-184"
+                                className="makeStyles-title-181 makeStyles-title-185"
                                 component="h2"
                                 gutterBottom={true}
                                 variant="h5"
                               >
                                 <ForwardRef(Typography)
-                                  className="makeStyles-title-181 makeStyles-title-184"
+                                  className="makeStyles-title-181 makeStyles-title-185"
                                   classes={
                                     Object {
                                       "alignCenter": "MuiTypography-alignCenter",
@@ -713,7 +713,7 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                   variant="h5"
                                 >
                                   <h2
-                                    className="MuiTypography-root makeStyles-title-181 makeStyles-title-184 MuiTypography-h5 MuiTypography-gutterBottom"
+                                    className="MuiTypography-root makeStyles-title-181 makeStyles-title-185 MuiTypography-h5 MuiTypography-gutterBottom"
                                   >
                                     test-name
                                   </h2>
@@ -763,15 +763,14 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                   >
                                     <WithStyles(ForwardRef(Typography))
                                       align="left"
-                                      className="makeStyles-description-179"
-                                      color="textSecondary"
+                                      className="makeStyles-description-179 makeStyles-description-184"
                                       component="p"
                                       key="Class"
                                       variant="body2"
                                     >
                                       <ForwardRef(Typography)
                                         align="left"
-                                        className="makeStyles-description-179"
+                                        className="makeStyles-description-179 makeStyles-description-184"
                                         classes={
                                           Object {
                                             "alignCenter": "MuiTypography-alignCenter",
@@ -806,18 +805,17 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                             "subtitle2": "MuiTypography-subtitle2",
                                           }
                                         }
-                                        color="textSecondary"
                                         component="p"
                                         variant="body2"
                                       >
                                         <p
-                                          className="MuiTypography-root makeStyles-description-179 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+                                          className="MuiTypography-root makeStyles-description-179 makeStyles-description-184 MuiTypography-body2 MuiTypography-alignLeft"
                                         >
                                           Class: 
                                           <span
-                                            className="makeStyles-detailValue-182 makeStyles-detailValue-185"
+                                            className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
-                                            test-class
+                                            light freighter
                                              
                                           </span>
                                         </p>
@@ -825,15 +823,14 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                     </WithStyles(ForwardRef(Typography))>
                                     <WithStyles(ForwardRef(Typography))
                                       align="left"
-                                      className="makeStyles-description-179"
-                                      color="textSecondary"
+                                      className="makeStyles-description-179 makeStyles-description-184"
                                       component="p"
                                       key="Cost"
                                       variant="body2"
                                     >
                                       <ForwardRef(Typography)
                                         align="left"
-                                        className="makeStyles-description-179"
+                                        className="makeStyles-description-179 makeStyles-description-184"
                                         classes={
                                           Object {
                                             "alignCenter": "MuiTypography-alignCenter",
@@ -868,16 +865,15 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                             "subtitle2": "MuiTypography-subtitle2",
                                           }
                                         }
-                                        color="textSecondary"
                                         component="p"
                                         variant="body2"
                                       >
                                         <p
-                                          className="MuiTypography-root makeStyles-description-179 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+                                          className="MuiTypography-root makeStyles-description-179 makeStyles-description-184 MuiTypography-body2 MuiTypography-alignLeft"
                                         >
                                           Cost: 
                                           <span
-                                            className="makeStyles-detailValue-182 makeStyles-detailValue-185"
+                                            className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
                                             10000
                                              
@@ -888,15 +884,14 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                     </WithStyles(ForwardRef(Typography))>
                                     <WithStyles(ForwardRef(Typography))
                                       align="left"
-                                      className="makeStyles-description-179"
-                                      color="textSecondary"
+                                      className="makeStyles-description-179 makeStyles-description-184"
                                       component="p"
                                       key="Crew"
                                       variant="body2"
                                     >
                                       <ForwardRef(Typography)
                                         align="left"
-                                        className="makeStyles-description-179"
+                                        className="makeStyles-description-179 makeStyles-description-184"
                                         classes={
                                           Object {
                                             "alignCenter": "MuiTypography-alignCenter",
@@ -931,16 +926,15 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                             "subtitle2": "MuiTypography-subtitle2",
                                           }
                                         }
-                                        color="textSecondary"
                                         component="p"
                                         variant="body2"
                                       >
                                         <p
-                                          className="MuiTypography-root makeStyles-description-179 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+                                          className="MuiTypography-root makeStyles-description-179 makeStyles-description-184 MuiTypography-body2 MuiTypography-alignLeft"
                                         >
                                           Crew: 
                                           <span
-                                            className="makeStyles-detailValue-182 makeStyles-detailValue-185"
+                                            className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
                                             5
                                              
@@ -950,15 +944,14 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                     </WithStyles(ForwardRef(Typography))>
                                     <WithStyles(ForwardRef(Typography))
                                       align="left"
-                                      className="makeStyles-description-179"
-                                      color="textSecondary"
+                                      className="makeStyles-description-179 makeStyles-description-184"
                                       component="p"
                                       key="Max Atmospheric Speed"
                                       variant="body2"
                                     >
                                       <ForwardRef(Typography)
                                         align="left"
-                                        className="makeStyles-description-179"
+                                        className="makeStyles-description-179 makeStyles-description-184"
                                         classes={
                                           Object {
                                             "alignCenter": "MuiTypography-alignCenter",
@@ -993,18 +986,17 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                             "subtitle2": "MuiTypography-subtitle2",
                                           }
                                         }
-                                        color="textSecondary"
                                         component="p"
                                         variant="body2"
                                       >
                                         <p
-                                          className="MuiTypography-root makeStyles-description-179 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+                                          className="MuiTypography-root makeStyles-description-179 makeStyles-description-184 MuiTypography-body2 MuiTypography-alignLeft"
                                         >
                                           Max Atmospheric Speed: 
                                           <span
-                                            className="makeStyles-detailValue-182 makeStyles-detailValue-185"
+                                            className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
-                                            999
+                                            9999
                                              
                                           </span>
                                         </p>
@@ -1012,15 +1004,14 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                     </WithStyles(ForwardRef(Typography))>
                                     <WithStyles(ForwardRef(Typography))
                                       align="left"
-                                      className="makeStyles-description-179"
-                                      color="textSecondary"
+                                      className="makeStyles-description-179 makeStyles-description-184"
                                       component="p"
                                       key="Hyperdrive Rating"
                                       variant="body2"
                                     >
                                       <ForwardRef(Typography)
                                         align="left"
-                                        className="makeStyles-description-179"
+                                        className="makeStyles-description-179 makeStyles-description-184"
                                         classes={
                                           Object {
                                             "alignCenter": "MuiTypography-alignCenter",
@@ -1055,16 +1046,15 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                                             "subtitle2": "MuiTypography-subtitle2",
                                           }
                                         }
-                                        color="textSecondary"
                                         component="p"
                                         variant="body2"
                                       >
                                         <p
-                                          className="MuiTypography-root makeStyles-description-179 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+                                          className="MuiTypography-root makeStyles-description-179 makeStyles-description-184 MuiTypography-body2 MuiTypography-alignLeft"
                                         >
                                           Hyperdrive Rating: 
                                           <span
-                                            className="makeStyles-detailValue-182 makeStyles-detailValue-185"
+                                            className="makeStyles-detailValue-182 makeStyles-detailValue-186"
                                           >
                                             1
                                              
@@ -1275,50 +1265,1009 @@ exports[`Screens | StarshipDetails renders without crashing not loading state 1`
                         />
                       </ForwardRef(Divider)>
                     </WithStyles(ForwardRef(Divider))>
-                    <WithStyles(ForwardRef(Typography))>
-                      <ForwardRef(Typography)
-                        classes={
-                          Object {
-                            "alignCenter": "MuiTypography-alignCenter",
-                            "alignJustify": "MuiTypography-alignJustify",
-                            "alignLeft": "MuiTypography-alignLeft",
-                            "alignRight": "MuiTypography-alignRight",
-                            "body1": "MuiTypography-body1",
-                            "body2": "MuiTypography-body2",
-                            "button": "MuiTypography-button",
-                            "caption": "MuiTypography-caption",
-                            "colorError": "MuiTypography-colorError",
-                            "colorInherit": "MuiTypography-colorInherit",
-                            "colorPrimary": "MuiTypography-colorPrimary",
-                            "colorSecondary": "MuiTypography-colorSecondary",
-                            "colorTextPrimary": "MuiTypography-colorTextPrimary",
-                            "colorTextSecondary": "MuiTypography-colorTextSecondary",
-                            "displayBlock": "MuiTypography-displayBlock",
-                            "displayInline": "MuiTypography-displayInline",
-                            "gutterBottom": "MuiTypography-gutterBottom",
-                            "h1": "MuiTypography-h1",
-                            "h2": "MuiTypography-h2",
-                            "h3": "MuiTypography-h3",
-                            "h4": "MuiTypography-h4",
-                            "h5": "MuiTypography-h5",
-                            "h6": "MuiTypography-h6",
-                            "noWrap": "MuiTypography-noWrap",
-                            "overline": "MuiTypography-overline",
-                            "paragraph": "MuiTypography-paragraph",
-                            "root": "MuiTypography-root",
-                            "srOnly": "MuiTypography-srOnly",
-                            "subtitle1": "MuiTypography-subtitle1",
-                            "subtitle2": "MuiTypography-subtitle2",
-                          }
+                    <div
+                      className="rv-xy-plot  rv-radar-chart"
+                      style={
+                        Object {
+                          "height": "400px",
+                          "width": "400px",
                         }
+                      }
+                    >
+                      <svg
+                        className="rv-xy-plot__inner"
+                        height={400}
+                        onClick={[Function]}
+                        onDoubleClick={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseMove={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchCancel={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        onWheel={[Function]}
+                        width={400}
                       >
-                        <p
-                          className="MuiTypography-root MuiTypography-body1"
+                        <g
+                          className="rv-xy-plot__circular-grid-lines"
+                          transform="translate(200,200)"
                         >
-                          Graph here
-                        </p>
-                      </ForwardRef(Typography)>
-                    </WithStyles(ForwardRef(Typography))>
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="0"
+                            r={0}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="1"
+                            r={14.999999999999996}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="2"
+                            r={29.999999999999993}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="3"
+                            r={45.00000000000001}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="4"
+                            r={60}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="5"
+                            r={75}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="6"
+                            r={90}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="7"
+                            r={105}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="8"
+                            r={120}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                          <circle
+                            className="rv-xy-plot__circular-grid-lines__line"
+                            cx={0}
+                            cy={0}
+                            key="9"
+                            r={135}
+                            style={
+                              Object {
+                                "stroke": "#333",
+                              }
+                            }
+                          />
+                        </g>
+                        <g
+                          className="rv-xy-manipulable-axis rv-xy-plot__axis "
+                          transform="translate(50,40)"
+                        >
+                          <line
+                            className="rv-xy-plot__axis__line"
+                            strokeWidth={2}
+                            x1={150}
+                            x2={150}
+                            y1={160}
+                            y2={0}
+                          />
+                          <g
+                            className="rv-xy-manipulable-axis__ticks"
+                          >
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="0"
+                              transform="translate(150, 160)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={5}
+                                y1={0}
+                                y2={-1.2246467991473533e-15}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={5}
+                                y={-1.2246467991473533e-15}
+                              />
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="1"
+                              transform="translate(150, 128)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={5}
+                                y1={0}
+                                y2={-1.2246467991473533e-15}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={5}
+                                y={-1.2246467991473533e-15}
+                              >
+                                210
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="2"
+                              transform="translate(150, 96)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={5}
+                                y1={0}
+                                y2={-1.2246467991473533e-15}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={5}
+                                y={-1.2246467991473533e-15}
+                              >
+                                420
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="3"
+                              transform="translate(150, 64)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={5}
+                                y1={0}
+                                y2={-1.2246467991473533e-15}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={5}
+                                y={-1.2246467991473533e-15}
+                              >
+                                630
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="4"
+                              transform="translate(150, 32)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={5}
+                                y1={0}
+                                y2={-1.2246467991473533e-15}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={5}
+                                y={-1.2246467991473533e-15}
+                              >
+                                840
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="5"
+                              transform="translate(150, 0)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={5}
+                                y1={0}
+                                y2={-1.2246467991473533e-15}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={5}
+                                y={-1.2246467991473533e-15}
+                              >
+                                1050
+                              </text>
+                            </g>
+                          </g>
+                        </g>
+                        <g
+                          className="rv-xy-manipulable-axis rv-xy-plot__axis "
+                          transform="translate(50,40)"
+                        >
+                          <line
+                            className="rv-xy-plot__axis__line"
+                            strokeWidth={2}
+                            x1={150}
+                            x2={7.3415225557269705}
+                            y1={160}
+                            y2={110.55728090000841}
+                          />
+                          <g
+                            className="rv-xy-manipulable-axis__ticks"
+                          >
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="0"
+                              transform="translate(150, 160)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-1.6373548160602214}
+                                y1={0}
+                                y2={4.724306214284209}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-1.6373548160602214}
+                                y={4.724306214284209}
+                              />
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="1"
+                              transform="translate(121.46830451114539, 150.11145618000168)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-1.6373548160602214}
+                                y1={0}
+                                y2={4.724306214284209}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-1.6373548160602214}
+                                y={4.724306214284209}
+                              >
+                                20000
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="2"
+                              transform="translate(92.9366090222908, 140.22291236000336)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-1.6373548160602214}
+                                y1={0}
+                                y2={4.724306214284209}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-1.6373548160602214}
+                                y={4.724306214284209}
+                              >
+                                40000
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="3"
+                              transform="translate(64.4049135334362, 130.33436854000504)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-1.6373548160602214}
+                                y1={0}
+                                y2={4.724306214284209}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-1.6373548160602214}
+                                y={4.724306214284209}
+                              >
+                                60000
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="4"
+                              transform="translate(35.87321804458159, 120.44582472000673)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-1.6373548160602214}
+                                y1={0}
+                                y2={4.724306214284209}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-1.6373548160602214}
+                                y={4.724306214284209}
+                              >
+                                80000
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="5"
+                              transform="translate(7.341522555726982, 110.55728090000841)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-1.6373548160602214}
+                                y1={0}
+                                y2={4.724306214284209}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-1.6373548160602214}
+                                y={4.724306214284209}
+                              >
+                                100000
+                              </text>
+                            </g>
+                          </g>
+                        </g>
+                        <g
+                          className="rv-xy-manipulable-axis rv-xy-plot__axis "
+                          transform="translate(50,40)"
+                        >
+                          <line
+                            className="rv-xy-plot__axis__line"
+                            strokeWidth={2}
+                            x1={150}
+                            x2={61.83221215612901}
+                            y1={160}
+                            y2={289.44271909999156}
+                          />
+                          <g
+                            className="rv-xy-manipulable-axis__ticks"
+                          >
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="0"
+                              transform="translate(150, 160)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={4.132452967080079}
+                                y1={0}
+                                y2={2.814752648967765}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={4.132452967080079}
+                                y={2.814752648967765}
+                              />
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="1"
+                              transform="translate(132.3664424312258, 185.88854381999832)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={4.132452967080079}
+                                y1={0}
+                                y2={2.814752648967765}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={4.132452967080079}
+                                y={2.814752648967765}
+                              >
+                                0.80
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="2"
+                              transform="translate(114.7328848624516, 211.77708763999664)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={4.132452967080079}
+                                y1={0}
+                                y2={2.814752648967765}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={4.132452967080079}
+                                y={2.814752648967765}
+                              >
+                                1.6
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="3"
+                              transform="translate(97.09932729367739, 237.66563145999496)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={4.132452967080079}
+                                y1={0}
+                                y2={2.814752648967765}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={4.132452967080079}
+                                y={2.814752648967765}
+                              >
+                                2.4
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="4"
+                              transform="translate(79.4657697249032, 263.5541752799933)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={4.132452967080079}
+                                y1={0}
+                                y2={2.814752648967765}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={4.132452967080079}
+                                y={2.814752648967765}
+                              >
+                                3.2
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="5"
+                              transform="translate(61.832212156129, 289.44271909999156)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={4.132452967080079}
+                                y1={0}
+                                y2={2.814752648967765}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={4.132452967080079}
+                                y={2.814752648967765}
+                              >
+                                4.0
+                              </text>
+                            </g>
+                          </g>
+                        </g>
+                        <g
+                          className="rv-xy-manipulable-axis rv-xy-plot__axis "
+                          transform="translate(50,40)"
+                        >
+                          <line
+                            className="rv-xy-plot__axis__line"
+                            strokeWidth={2}
+                            x1={150}
+                            x2={238.16778784387094}
+                            y1={160}
+                            y2={289.4427190999916}
+                          />
+                          <g
+                            className="rv-xy-manipulable-axis__ticks"
+                          >
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="0"
+                              transform="translate(150, 160)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-4.13245296708008}
+                                y1={0}
+                                y2={2.814752648967764}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-4.13245296708008}
+                                y={2.814752648967764}
+                              />
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="1"
+                              transform="translate(167.6335575687742, 185.88854381999832)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-4.13245296708008}
+                                y1={0}
+                                y2={2.814752648967764}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-4.13245296708008}
+                                y={2.814752648967764}
+                              >
+                                20
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="2"
+                              transform="translate(185.2671151375484, 211.7770876399967)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-4.13245296708008}
+                                y1={0}
+                                y2={2.814752648967764}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-4.13245296708008}
+                                y={2.814752648967764}
+                              >
+                                40
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="3"
+                              transform="translate(202.90067270632255, 237.66563145999498)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-4.13245296708008}
+                                y1={0}
+                                y2={2.814752648967764}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-4.13245296708008}
+                                y={2.814752648967764}
+                              >
+                                60
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="4"
+                              transform="translate(220.53423027509675, 263.5541752799933)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-4.13245296708008}
+                                y1={0}
+                                y2={2.814752648967764}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-4.13245296708008}
+                                y={2.814752648967764}
+                              >
+                                80
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="5"
+                              transform="translate(238.16778784387094, 289.4427190999916)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={-4.13245296708008}
+                                y1={0}
+                                y2={2.814752648967764}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={-4.13245296708008}
+                                y={2.814752648967764}
+                              >
+                                100
+                              </text>
+                            </g>
+                          </g>
+                        </g>
+                        <g
+                          className="rv-xy-manipulable-axis rv-xy-plot__axis "
+                          transform="translate(50,40)"
+                        >
+                          <line
+                            className="rv-xy-plot__axis__line"
+                            strokeWidth={2}
+                            x1={150}
+                            x2={292.65847744427305}
+                            y1={160}
+                            y2={110.55728090000844}
+                          />
+                          <g
+                            className="rv-xy-manipulable-axis__ticks"
+                          >
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="0"
+                              transform="translate(150, 160)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={1.6373548160602196}
+                                y1={0}
+                                y2={4.72430621428421}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={1.6373548160602196}
+                                y={4.72430621428421}
+                              />
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="1"
+                              transform="translate(178.5316954888546, 150.1114561800017)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={1.6373548160602196}
+                                y1={0}
+                                y2={4.72430621428421}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={1.6373548160602196}
+                                y={4.72430621428421}
+                              >
+                                15
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="2"
+                              transform="translate(207.06339097770922, 140.2229123600034)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={1.6373548160602196}
+                                y1={0}
+                                y2={4.72430621428421}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={1.6373548160602196}
+                                y={4.72430621428421}
+                              >
+                                30
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="3"
+                              transform="translate(235.59508646656383, 130.33436854000507)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={1.6373548160602196}
+                                y1={0}
+                                y2={4.72430621428421}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={1.6373548160602196}
+                                y={4.72430621428421}
+                              >
+                                45
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="4"
+                              transform="translate(264.12678195541844, 120.44582472000675)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={1.6373548160602196}
+                                y1={0}
+                                y2={4.72430621428421}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={1.6373548160602196}
+                                y={4.72430621428421}
+                              >
+                                60
+                              </text>
+                            </g>
+                            <g
+                              className="rv-xy-plot__axis__tick"
+                              key="5"
+                              transform="translate(292.65847744427305, 110.55728090000845)"
+                            >
+                              <line
+                                className="rv-xy-plot__axis__tick__line"
+                                x1={0}
+                                x2={1.6373548160602196}
+                                y1={0}
+                                y2={4.72430621428421}
+                              />
+                              <text
+                                className="rv-xy-plot__axis__tick__text"
+                                opacity={1}
+                                textAnchor="start"
+                                x={1.6373548160602196}
+                                y={4.72430621428421}
+                              >
+                                75
+                              </text>
+                            </g>
+                          </g>
+                        </g>
+                        <path
+                          className="rv-xy-plot__series rv-xy-plot__series--polygon rv-radar-chart-polygon"
+                          d=" M150.0000000000001 -1363.6571428571428 L135.7341522555727 155.05572809000085 L39.79026519516126 321.80339887498945 L150.87729142133205 161.2879872547263 L207.06339097770922 140.2229123600034 Z"
+                          fill="#12939A"
+                          onClick={[Function]}
+                          onContextMenu={[Function]}
+                          onMouseOut={[Function]}
+                          onMouseOver={[Function]}
+                          style={
+                            Object {
+                              "fill": "#12939A",
+                              "fillOpacity": 0.4,
+                              "stroke": "#12939A",
+                              "strokeOpacity": 1,
+                              "strokeWidth": 2,
+                            }
+                          }
+                          transform="translate(50,40)"
+                        />
+                        <g
+                          className="rv-xy-plot__series rv-xy-plot__series--label rv-radar-chart-label"
+                          style={Object {}}
+                          transform="translate(50,40)"
+                        >
+                          <text
+                            className="rv-xy-plot__series--label-text"
+                            dominantBaseline="text-before-edge"
+                            fill="#FFE300"
+                            fontSize={12}
+                            fontWeight={600}
+                            key="0"
+                            onClick={[Function]}
+                            onContextMenu={[Function]}
+                            onMouseOut={[Function]}
+                            onMouseOver={[Function]}
+                            textAnchor="middle"
+                            transform="rotate(0,150,-32)"
+                            x={150}
+                            y={-32}
+                          >
+                            Max Atm. Speed
+                          </text>
+                          <text
+                            className="rv-xy-plot__series--label-text"
+                            dominantBaseline="text-before-edge"
+                            fill="#FFE300"
+                            fontSize={12}
+                            fontWeight={600}
+                            key="1"
+                            onClick={[Function]}
+                            onContextMenu={[Function]}
+                            onMouseOut={[Function]}
+                            onMouseOver={[Function]}
+                            textAnchor="middle"
+                            transform="rotate(0,-21.190172933127617,100.66873708001009)"
+                            x={-21.190172933127617}
+                            y={100.66873708001009}
+                          >
+                            Cost
+                          </text>
+                          <text
+                            className="rv-xy-plot__series--label-text"
+                            dominantBaseline="text-after-edge"
+                            fill="#FFE300"
+                            fontSize={12}
+                            fontWeight={600}
+                            key="2"
+                            onClick={[Function]}
+                            onContextMenu={[Function]}
+                            onMouseOut={[Function]}
+                            onMouseOver={[Function]}
+                            textAnchor="middle"
+                            transform="rotate(0,44.19865458735482,315.33126291998985)"
+                            x={44.19865458735482}
+                            y={315.33126291998985}
+                          >
+                            Crew
+                          </text>
+                          <text
+                            className="rv-xy-plot__series--label-text"
+                            dominantBaseline="text-after-edge"
+                            fill="#FFE300"
+                            fontSize={12}
+                            fontWeight={600}
+                            key="3"
+                            onClick={[Function]}
+                            onContextMenu={[Function]}
+                            onMouseOut={[Function]}
+                            onMouseOver={[Function]}
+                            textAnchor="middle"
+                            transform="rotate(0,255.8013454126451,315.3312629199899)"
+                            x={255.8013454126451}
+                            y={315.3312629199899}
+                          >
+                            HyperD Rat.
+                          </text>
+                          <text
+                            className="rv-xy-plot__series--label-text"
+                            dominantBaseline="text-before-edge"
+                            fill="#FFE300"
+                            fontSize={12}
+                            fontWeight={600}
+                            key="4"
+                            onClick={[Function]}
+                            onContextMenu={[Function]}
+                            onMouseOut={[Function]}
+                            onMouseOver={[Function]}
+                            textAnchor="middle"
+                            transform="rotate(0,321.19017293312766,100.66873708001015)"
+                            x={321.19017293312766}
+                            y={100.66873708001015}
+                          >
+                            Max ML/h
+                          </text>
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </ForwardRef(Grid)>
               </WithStyles(ForwardRef(Grid))>
