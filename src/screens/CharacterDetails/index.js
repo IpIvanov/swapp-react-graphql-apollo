@@ -74,6 +74,7 @@ const CharacterDetails = () => {
               loadMoreIsVisible={false}
               linkToUrl="starships"
               mdColumns={12}
+              smColumns={12}
             />
           </Grid>
         </Grid>

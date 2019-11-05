@@ -244,6 +244,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
               item={true}
               key="0"
               md={4}
+              sm={6}
               xs={12}
             >
               <ForwardRef(Grid)
@@ -356,10 +357,11 @@ exports[`Components | ListItems renders without crashing 1`] = `
                 }
                 item={true}
                 md={4}
+                sm={6}
                 xs={12}
               >
                 <div
-                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
                 >
                   <WithStyles(ForwardRef(Link))
                     className="makeStyles-linkTo-6"
@@ -612,6 +614,7 @@ exports[`Components | ListItems renders without crashing 1`] = `
               item={true}
               key="1"
               md={4}
+              sm={6}
               xs={12}
             >
               <ForwardRef(Grid)
@@ -724,10 +727,11 @@ exports[`Components | ListItems renders without crashing 1`] = `
                 }
                 item={true}
                 md={4}
+                sm={6}
                 xs={12}
               >
                 <div
-                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
                 >
                   <WithStyles(ForwardRef(Link))
                     className="makeStyles-linkTo-6"

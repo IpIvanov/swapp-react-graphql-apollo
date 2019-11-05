@@ -426,7 +426,7 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
             >
               <WithStyles(ForwardRef(Grid))
                 container={true}
-                spacing={10}
+                spacing={4}
               >
                 <ForwardRef(Grid)
                   classes={
@@ -537,10 +537,10 @@ exports[`Screens | Episodes renders without crashing not loading state 1`] = `
                     }
                   }
                   container={true}
-                  spacing={10}
+                  spacing={4}
                 >
                   <div
-                    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-10"
+                    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
                   >
                     <WithStyles(ForwardRef(Grid))
                       item={true}

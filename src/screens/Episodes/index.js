@@ -42,7 +42,7 @@ const Episodes = () => {
       <Header />
       <Container maxWidth="md" className={classes.innerContainer}>
         <Grid container display="flex" direction="column">
-          <Grid container spacing={10}>
+          <Grid container spacing={4}>
             {episodes.map((episode) => (
               <Grid item xs={12} sm={6} md={4} key={episode.id}>
                 <Link

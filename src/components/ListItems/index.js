@@ -5,7 +5,7 @@ import { makeStyles, Link, Typography, Card, Grid, Box, Button, CardMedia, CardC
 import styles from './styles';
 import ThemeContext from '../../contexts/ThemeContext';
 
-const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkToUrl, mdColumns }) => {
+const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkToUrl, mdColumns, smColumns }) => {
   const {
     theme,
   } = useContext(ThemeContext);
@@ -21,7 +21,7 @@ const ListItems = ({ listItems, loadMoreIsVisible, loadMoreHandler, linkToUrl, m
     <Grid container display="flex" direction="row">
       <Grid container spacing={2}>
         {listItems.map(({ name, id, image }, i) => (
-          <Grid item xs={12} md={mdColumns} key={i.toString()}>
+          <Grid item xs={12} sm={smColumns} md={mdColumns} key={i.toString()}>
             <Link
               href="/"
               onClick={(e) => {
@@ -70,6 +70,7 @@ ListItems.propTypes = {
   loadMoreHandler: PropTypes.func,
   linkToUrl: PropTypes.string,
   mdColumns: PropTypes.number,
+  smColumns: PropTypes.number,
 };
 
 ListItems.defaultProps = {
@@ -78,6 +79,7 @@ ListItems.defaultProps = {
   loadMoreHandler: () => { },
   linkToUrl: '/test',
   mdColumns: 4,
+  smColumns: 6,
 };
 
 export default ListItems;
